@@ -313,3 +313,52 @@ body.dark-mode .stats-banner-section {
 body.dark-mode .border-end-custom {
     border-color: #334155 !important;
 }
+/* ==================== ABOUT US SECTION STYLES ==================== */
+.about-section {
+    background-color: #f8fafc;
+    transition: background-color 0.3s ease;
+}
+
+.about-main-title {
+    color: #111827;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.about-sub-text {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Right Side Image Styling */
+.about-image-box img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image-box img:hover {
+    transform: scale(1.02); /* Hover par halka sa zoom effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ==================== DARK MODE SUPPORT ==================== */
+body.dark-mode .about-section {
+    background-color: #0f172a !important;
+}
+
+body.dark-mode .about-main-title,
+body.dark-mode .card-title-dark {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .about-sub-text {
+    color: #94a3b8 !important;
+}
+
+/* Dark mode mein image par halka border ya shadow manage karne ke liye */
+body.dark-mode .about-image-box img {
+    border: 1px solid #334155;
+}
