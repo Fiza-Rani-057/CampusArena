@@ -14,14 +14,14 @@
 }
 
 .nav-link:hover, .nav-link.active {
-    color: #063127 !important;
+    color: #0a2b23 !important;
 }
 
 .btn-dark-custom {
     background-color: #063127;
     color: #FFFFFF;
-    border: none;
-    font-size: 13px;
+    border: 2px solid  #034a32;
+    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -101,9 +101,9 @@ body.dark-mode .theme-toggle-btn i {
 .btn-dark-custom {
     background-color: #063127;
     color: #FFFFFF;
-    border: none;
-    font-size: 14px;
+    font-size: 15px;
     transition: 0.3s;
+   border: 2px solid #063127;
 }
 
 .btn-dark-custom:hover {
@@ -306,7 +306,7 @@ body.dark-mode .hero-section .trusted-brands-list span i {
 
 /* Dark Mode Support */
 body.dark-mode .stats-banner-section {
-    background-color: #034a32 !important;
+    background-color: #085239 !important;
     border-color: transparent !important;
 }
 
