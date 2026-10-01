@@ -271,3 +271,45 @@ body.dark-mode .hero-section .trusted-brands-list span i {
     color: #34D399 !important;
 
 }
+ /* Stats section  */
+.stats-banner-section {
+    background-color: #063127; 
+    width: 100%;
+    min-height: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: -40px;
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.stat-desc {
+    letter-spacing: 0.5px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 991.98px) {
+    .border-end-custom {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}
+
+/* Dark Mode Support */
+body.dark-mode .stats-banner-section {
+    background-color: #034a32 !important;
+    border-color: transparent !important;
+}
+
+body.dark-mode .border-end-custom {
+    border-color: #334155 !important;
+}
