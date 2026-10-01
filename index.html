@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusArena</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top py-3 border-bottom">
+        <div class="container">
+            <!-- Brand Logo / Name -->
+            <a class="navbar-brand fw-black fs-4 text-dark d-flex align-items-center gap-2" href="#">
+                <span
+                    class="brand-icon-box bg-dark text-white rounded-2 d-flex align-items-center justify-content-center"
+                    style="width: 32px; height: 32px; font-size: 14px;">
+                    <i class="fa-solid fa-shield-halved text-success"></i>
+                </span>
+                CampusArena
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links & Theme Toggle -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-lg-4 mb-3 mb-lg-0 me-4">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-dark active" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-muted" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-muted" href="#tournaments">Tournaments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-muted" href="#sportsclub">Sports Club</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-muted" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Right Actions: Theme Toggle & Account / Login -->
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Theme Toggle Button -->
+                    <button id="themeToggleBtn"
+                        class="btn btn-light rounded-circle theme-toggle-btn d-flex align-items-center justify-content-center"
+                        title="Toggle Theme">
+                        <i class="fa-solid fa-moon text-dark"></i>
+                    </button>
+
+                    <!-- Login / Account Button -->
+                    <a href="#login" class="btn btn-dark-custom px-4 py-2 rounded-pill fw-bold text-sm">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+    <!-- HERO SECTION START -->
+    <!-- HERO SECTION START -->
+    <section id="hero" class="hero-section py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+
+                <!-- Left Side: Heading, Description & Action Buttons -->
+                <div class="col-lg-6">
+                    <h1 class="hero-main-title fw-black display-4 mb-3">
+                        Elevate Your <br>Campus Sports <br>For Success
+                    </h1>
+                    <p class="hero-sub-text mb-4">
+                        Built in collaboration to manage campus athletic facilities, streamline court & gym bookings,
+                        and track tournament success — transforming university sports.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex align-items-center gap-3 mb-5">
+                        <a href="#login"
+                            class="btn btn-dark-custom px-4 py-3 rounded-pill fw-bold d-inline-flex align-items-center gap-2">
+                            Get Started <i class="fa-solid fa-arrow-right small"></i>
+                        </a>
+                        <a href="#features" class="btn btn-light-custom px-4 py-3 rounded-pill fw-bold">
+                            Related Features
+                        </a>
+                    </div>
+
+                    <!-- Trusted Sports / Gymkhana Row -->
+                    <!-- Trusted Sports / Gymkhana Row -->
+                    <div class="pt-3 border-top border-custom-subtle">
+                        <p class="trusted-text mb-3 fw-bold text-uppercase">Trusted by campus athletic teams</p>
+                        <div class="trusted-brands-list d-flex align-items-center gap-4">
+                            <span><i class="fa-solid fa-shield-halved me-1"></i> Gymkhana</span>
+                            <span><i class="fa-solid fa-trophy me-1"></i> Tournaments</span>
+                            <span><i class="fa-solid fa-bolt me-1"></i> Live Scores</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Cards Grid -->
+                <div class="col-lg-6">
+                    <div class="row g-3">
+
+                        <!-- Top Left Arch/Curved Image Card -->
+                        <div class="col-md-6">
+                            <div class="arch-image-box position-relative h-100 shadow-sm overflow-hidden">
+                                <img src="images/image_92981bd0.jpg" alt="Campus Sports"
+                                    class="w-100 h-100 object-fit-cover">
+                                <div class="floating-circle-badge">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Top Right Stats Card -->
+                        <div class="col-md-6">
+                            <div
+                                class="card-box-custom p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="avatar-group d-flex">
+                                        <div class="avatar-circle bg-success text-white">S</div>
+                                        <div class="avatar-circle bg-dark text-white ms-n2">A</div>
+                                        <div class="avatar-circle bg-secondary text-white ms-n2">K</div>
+                                    </div>
+                                    <div class="text-custom-green small">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <h3 class="fw-black mb-1 card-title-dark">230+</h3>
+                                <p class="text-muted extra-small mb-3">Active campus teams & tournament registrations.
+                                </p>
+                                <div class="progress" style="height: 4px;">
+                                    <div class="progress-bar bg-success" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Wide Card -->
+                        <div class="col-12">
+                            <div
+                                class="card-box-custom p-4 rounded-4 shadow-sm d-flex justify-content-between align-items-center">
+                                <div style="max-width: 65%;">
+                                    <div class="d-flex align-items-center gap-2 mb-1">
+                                        <span class="custom-dash"></span>
+                                        <small class="text-muted fw-bold text-uppercase tracking-wider"
+                                            style="font-size: 9px;">Campus Matches & Trophy Wins</small>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 card-title-dark" style="font-size: 16px; line-height: 1.4;">
+                                        Boost match turnouts & sports engagement</h4>
+                                </div>
+                                <div class="d-flex align-items-end gap-2 px-2">
+                                    <div class="bg-graph-bar rounded-top" style="width: 16px; height: 30px;"></div>
+                                    <div class="bg-graph-bar rounded-top" style="width: 16px; height: 45px;"></div>
+                                    <div class="bg-graph-bar rounded-top" style="width: 16px; height: 65px;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- HERO SECTION END -->
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+.navbar {
+    background-color: #FFFFFF !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #063127 !important;
+}
+
+.btn-dark-custom {
+    background-color: #063127;
+    color: #FFFFFF;
+    border: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn-dark-custom:hover {
+    background-color: #0a4d3e;
+    color: #FFFFFF;
+}
+
+.theme-toggle-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #e2e8f0;
+}
+
+/* Dark Theme Classes (Jab toggle active ho) */
+body.dark-mode {
+    background-color: #0a1121 !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode .navbar {
+    background-color: #101926 !important;
+    border-bottom-color: #334155 !important;
+}
+
+body.dark-mode .navbar-brand {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .nav-link {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .nav-link:hover, 
+body.dark-mode .nav-link.active {
+    color: #10B981 !important;
+}
+
+body.dark-mode .theme-toggle-btn {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+body.dark-mode .theme-toggle-btn i {
+    color: #10B981 !important;
+}
+/* --- LIGHT MODE (DEFAULT) --- */
+.hero-section {
+    background-color: #FFFFFF;
+    color: #111827;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-main-title {
+    font-weight: 900;
+    color: #111827;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.hero-sub-text {
+    color: #6b7280;
+    font-size: 14px;
+    max-width: 440px;
+    line-height: 1.6;
+}
+
+.btn-dark-custom {
+    background-color: #063127;
+    color: #FFFFFF;
+    border: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-dark-custom:hover {
+    background-color: #0a4d3e;
+    color: #FFFFFF;
+}
+
+.btn-light-custom {
+    background-color: transparent;
+    color: #111827;
+    border: 2px solid #063127;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-light-custom:hover {
+    color: #063127;
+    border: 2px solid #10B981;
+}
+.text-custom-green {
+    color: #10B981 !important; /* Green accent color */
+}
+
+body.dark-mode .text-custom-green {
+    color: #34D399 !important; /* Dark mode ke liye thoda bright green */
+}
+
+.arch-image-box {
+    background-color: #f4f7f5;
+    border: 1px solid #edf2f7;
+    border-top-left-radius: 120px !important;
+    border-top-right-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+    height: 190px;
+}
+
+.card-box-custom {
+    background-color: #f4f7f5;
+    border: 1px solid #edf2f7;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-title-dark {
+    color: #111827;
+}
+
+.bg-graph-bar {
+    background-color: #063127;
+}
+
+.floating-circle-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #063127;
+    color: #10B981;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+}
+
+.custom-dash {
+    width: 15px;
+    height: 2px;
+    background-color: #6b7280;
+    display: inline-block;
+}
+
+.avatar-group {
+    display: flex;
+}
+
+.avatar-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+}
+
+.ms-n2 {
+    margin-left: -8px;
+}
+
+.extra-small {
+    font-size: 11px;
+}
+
+.border-custom-subtle {
+    border-color: #e5e7eb !important;
+}
+
+
+/* --- DARK MODE STYLING --- */
+body.dark-mode .hero-section {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode .hero-main-title {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .hero-sub-text {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .btn-light-custom {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .btn-light-custom:hover {
+    color: #38bdf8 !important;
+}
+
+body.dark-mode .arch-image-box,
+body.dark-mode .card-box-custom {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .card-title-dark {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .bg-graph-bar {
+    background-color: #34D399 !important; /* Soft / Light Green */
+}
+
+body.dark-mode .floating-circle-badge {
+    background-color: #334155 !important;
+    color: #10B981 !important;
+}
+
+body.dark-mode .border-custom-subtle {
+    border-color: #334155 !important;
+}
+
+.hero-section .trusted-brands-list span {
+    color: #1f2937 !important; 
+    font-weight: 600;
+}
+
+.hero-section .trusted-brands-list span i {
+    color: #10B981 !important; /* Green icon color */
+}
+
+
+body.dark-mode .hero-section .trusted-brands-list span {
+    color: #f1f5f9 !important; 
+    font-weight: 600;
+}
+
+body.dark-mode .hero-section .trusted-brands-list span i {
+    color: #34D399 !important;
+
+}
