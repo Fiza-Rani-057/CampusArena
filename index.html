@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- NAVBAR START -->
@@ -16,7 +17,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                   <a class="navbar-brand fw-bold text-success d-flex align-items-center gap-2" href="#">
+                    <a class="navbar-brand fw-bold text-success d-flex align-items-center gap-2" href="#">
                         <i class="fa-solid fa-shield-halved"></i>
                         <span>CampusArena <small class="text-muted fs-6 font-monospace">|
                                 KU Sports</small></span>
@@ -262,307 +263,369 @@
     </section>
     <!-- ABOUT US SECTION END -->
     <!-- TOURNAMENTS SECTION START -->
-<section id="tournaments" class="tournaments-section py-5">
-    <div class="container py-4">
-        
-        <!-- Section Header -->
-        <div class="row text-center mb-5">
-            <div class="col-lg-8 mx-auto">    
-                <h2 class="tournaments-main-title fw-black display-6 mb-3">Active & Upcoming Tournaments</h2>
-                <p class="tournaments-sub-text text-muted mb-0">
-                    Stay updated with the latest inter-departmental sports events, match schedules, and live championship standings across Karachi University.
-                </p>
+    <section id="tournaments" class="tournaments-section py-5">
+        <div class="container py-4">
+
+            <!-- Section Header -->
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="tournaments-main-title fw-black display-6 mb-3">Active & Upcoming Tournaments</h2>
+                    <p class="tournaments-sub-text text-muted mb-0">
+                        Stay updated with the latest inter-departmental sports events, match schedules, and live
+                        championship standings across Karachi University.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tournaments Cards Row -->
+            <div class="row g-4">
+                <!-- Tournament Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="tournament-card p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-success text-white px-3 py-1 rounded-pill small">Live Now</span>
+                                <small class="text-muted font-monospace">Cricket</small>
+                            </div>
+                            <h4 class="fw-bold mb-2 tournament-title-dark">Inter-Department T20 Cup</h4>
+                            <p class="text-muted small mb-4">CS & Software Engineering vs Commerce Department at the
+                                main campus ground.</p>
+                        </div>
+                        <div
+                            class="tournament-footer border-top pt-3 d-flex justify-content-between align-items-center">
+                            <span class="small fw-semibold text-success"><i class="fa-solid fa-calendar-days me-1"></i>
+                                Oct 15, 2026</span>
+                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3 fw-bold">View
+                                Schedule</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tournament Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="tournament-card p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span
+                                    class="badge bg-success-subtle text-success px-3 py-1 rounded-pill small">Upcoming</span>
+                                <small class="text-muted font-monospace">Football</small>
+                            </div>
+                            <h4 class="fw-bold mb-2 tournament-title-dark">KU Champions League</h4>
+                            <p class="text-muted small mb-4">Inter-faculty football championship registration and group
+                                stage draws starting soon.</p>
+                        </div>
+                        <div
+                            class="tournament-footer border-top pt-3 d-flex justify-content-between align-items-center">
+                            <span class="small fw-semibold text-muted"><i class="fa-solid fa-calendar-days me-1"></i>
+                                Oct 25, 2026</span>
+                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3 fw-bold">Register
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tournament Card 3 -->
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div
+                        class="tournament-card p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span
+                                    class="badge bg-success-subtle text-success px-3 py-1 rounded-pill small">Registration
+                                    Open</span>
+                                <small class="text-muted font-monospace">Badminton</small>
+                            </div>
+                            <h4 class="fw-bold mb-2 tournament-title-dark">
+                                Sports Club Open Smash</h4>
+                            <p class="text-muted small mb-4">Singles and doubles badminton tournament held at the indoor
+                                university gymnasium.</p>
+                        </div>
+                        <div
+                            class="tournament-footer border-top pt-3 d-flex justify-content-between align-items-center">
+                            <span class="small fw-semibold text-muted"><i class="fa-solid fa-calendar-days me-1"></i>
+                                Nov 02, 2026</span>
+                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3 fw-bold">Join Event</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Tournaments Cards Row -->
-        <div class="row g-4">
-            <!-- Tournament Card 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="tournament-card p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-                    <div>
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-success text-white px-3 py-1 rounded-pill small">Live Now</span>
-                            <small class="text-muted font-monospace">Cricket</small>
-                        </div>
-                        <h4 class="fw-bold mb-2 tournament-title-dark">Inter-Department T20 Cup</h4>
-                        <p class="text-muted small mb-4">CS & Software Engineering vs Commerce Department at the main campus ground.</p>
-                    </div>
-                    <div class="tournament-footer border-top pt-3 d-flex justify-content-between align-items-center">
-                        <span class="small fw-semibold text-success"><i class="fa-solid fa-calendar-days me-1"></i> Oct 15, 2026</span>
-                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3 fw-bold">View Schedule</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tournament Card 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="tournament-card p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-                    <div>
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill small">Upcoming</span>
-                            <small class="text-muted font-monospace">Football</small>
-                        </div>
-                        <h4 class="fw-bold mb-2 tournament-title-dark">KU Champions League</h4>
-                        <p class="text-muted small mb-4">Inter-faculty football championship registration and group stage draws starting soon.</p>
-                    </div>
-                    <div class="tournament-footer border-top pt-3 d-flex justify-content-between align-items-center">
-                        <span class="small fw-semibold text-muted"><i class="fa-solid fa-calendar-days me-1"></i> Oct 25, 2026</span>
-                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3 fw-bold">Register Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tournament Card 3 -->
-            <div class="col-lg-4 col-md-6 mx-auto">
-                <div class="tournament-card p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-                    <div>
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill small">Registration Open</span>
-                            <small class="text-muted font-monospace">Badminton</small>
-                        </div>
-                        <h4 class="fw-bold mb-2 tournament-title-dark">
-                           Sports Club Open Smash</h4>
-                        <p class="text-muted small mb-4">Singles and doubles badminton tournament held at the indoor university gymnasium.</p>
-                    </div>
-                    <div class="tournament-footer border-top pt-3 d-flex justify-content-between align-items-center">
-                        <span class="small fw-semibold text-muted"><i class="fa-solid fa-calendar-days me-1"></i> Nov 02, 2026</span>
-                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-3 fw-bold">Join Event</a>
-                    </div>
-                </div>
-            </div>
         </div>
-        </div>
-    </div>
-</section>
-<!-- TOURNAMENTS SECTION END -->
- <!-- SPORTS CLUBS SECTION START -->
-<section id="clubs" class="clubs-section py-5">
-    <div class="container py-4">
-        <!-- Section Header -->
-        <div class="row text-center mb-5">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="clubs-main-title fw-black display-6 mb-3">Explore Campus Sports Clubs</h2>
-                <p class="clubs-sub-text text-muted mb-0">
-                    Join official university sports clubs, participate in coaching sessions, and represent Karachi University in inter-varsity championships.
-                </p>
-            </div>
-        </div>
-        <!-- Clubs Cards Grid -->
-        <div class="row g-4">
-            <!-- Club 1 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="club-card p-4 rounded-4 shadow-sm h-100 text-center d-flex flex-column align-items-center justify-content-between">
-                    <div>
-                        <div class="club-icon-box bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
-                            <i class="fa-solid fa-baseball-bat-ball fa-xl"></i>
-                        </div>
-                        <h5 class="fw-bold mb-2 club-title-dark">Cricket Club</h5>
-                        <p class="text-muted small mb-4">Train with professional coaches at the main campus cricket oval and nets.</p>
-                    </div>
-                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-4 fw-bold w-100">Join Club</a>
+    </section>
+    <!-- TOURNAMENTS SECTION END -->
+    <!-- SPORTS CLUBS SECTION START -->
+    <section id="sportsclub" class="clubs-section py-5">
+        <div class="container py-4">
+            <!-- Section Header -->
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="clubs-main-title fw-black display-6 mb-3">Explore Campus Sports Clubs</h2>
+                    <p class="clubs-sub-text text-muted mb-0">
+                        Join official university sports clubs, participate in coaching sessions, and represent Karachi
+                        University in inter-varsity championships.
+                    </p>
                 </div>
             </div>
+            <!-- Clubs Cards Grid -->
+            <div class="row g-4">
+                <!-- Club 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="club-card p-4 rounded-4 shadow-sm h-100 text-center d-flex flex-column align-items-center justify-content-between">
+                        <div>
+                            <div
+                                class="club-icon-box bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                                <i class="fa-solid fa-baseball-bat-ball fa-xl"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2 club-title-dark">Cricket Club</h5>
+                            <p class="text-muted small mb-4">Train with professional coaches at the main campus cricket
+                                oval and nets.</p>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-4 fw-bold w-100">Join Club</a>
+                    </div>
+                </div>
 
-            <!-- Club 2 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="club-card p-4 rounded-4 shadow-sm h-100 text-center d-flex flex-column align-items-center justify-content-between">
-                    <div>
-                        <div class="club-icon-box bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
-                            <i class="fa-solid fa-futbol fa-xl"></i>
+                <!-- Club 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="club-card p-4 rounded-4 shadow-sm h-100 text-center d-flex flex-column align-items-center justify-content-between">
+                        <div>
+                            <div
+                                class="club-icon-box bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                                <i class="fa-solid fa-futbol fa-xl"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2 club-title-dark">Football Club</h5>
+                            <p class="text-muted small mb-4">Regular practice matches and tactical training at the
+                                university football turf.</p>
                         </div>
-                        <h5 class="fw-bold mb-2 club-title-dark">Football Club</h5>
-                        <p class="text-muted small mb-4">Regular practice matches and tactical training at the university football turf.</p>
+                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-4 fw-bold w-100">Join Club</a>
                     </div>
-                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-4 fw-bold w-100">Join Club</a>
                 </div>
-            </div>
 
-            <!-- Club 3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="club-card p-4 rounded-4 shadow-sm h-100 text-center d-flex flex-column align-items-center justify-content-between">
-                    <div>
-                        <div class="club-icon-box bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
-                            <i class="fa-solid fa-dumbbell fa-xl"></i>
+                <!-- Club 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="club-card p-4 rounded-4 shadow-sm h-100 text-center d-flex flex-column align-items-center justify-content-between">
+                        <div>
+                            <div
+                                class="club-icon-box bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                                <i class="fa-solid fa-dumbbell fa-xl"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2 club-title-dark">Sports Club & Fitness</h5>
+                            <p class="text-muted small mb-4">Fully equipped indoor gymnasium with fitness training and
+                                aerobic classes.</p>
                         </div>
-                        <h5 class="fw-bold mb-2 club-title-dark">Gymkhana & Fitness</h5>
-                        <p class="text-muted small mb-4">Fully equipped indoor gymnasium with fitness training and aerobic classes.</p>
+                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-4 fw-bold w-100">Join Club</a>
                     </div>
-                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-4 fw-bold w-100">Join Club</a>
                 </div>
-            </div>
 
-            <!-- Club 4 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="club-card p-4 rounded-4 shadow-sm h-100 text-center d-flex flex-column align-items-center justify-content-between">
-                    <div>
-                        <div class="club-icon-box bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
-                            <i class="fa-solid fa-table-tennis-paddle-ball fa-xl"></i>
+                <!-- Club 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="club-card p-4 rounded-4 shadow-sm h-100 text-center d-flex flex-column align-items-center justify-content-between">
+                        <div>
+                            <div
+                                class="club-icon-box bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                                <i class="fa-solid fa-table-tennis-paddle-ball fa-xl"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2 club-title-dark">Badminton Club</h5>
+                            <p class="text-muted small mb-4">Indoor courts with dedicated slots for singles and doubles
+                                tournaments.</p>
                         </div>
-                        <h5 class="fw-bold mb-2 club-title-dark">Badminton Club</h5>
-                        <p class="text-muted small mb-4">Indoor courts with dedicated slots for singles and doubles tournaments.</p>
+                        <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-4 fw-bold w-100">Join Club</a>
                     </div>
-                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill px-4 fw-bold w-100">Join Club</a>
                 </div>
+
             </div>
 
         </div>
+    </section>
+    <!-- SPORTS CLUBS SECTION END -->
+    <!-- CONTACT US SECTION START -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container py-4">
 
-    </div>
-</section>
-<!-- SPORTS CLUBS SECTION END -->
- <!-- CONTACT US SECTION START -->
-<section id="contact" class="contact-section py-5">
-    <div class="container py-4">
-        
-        <div class="row text-center mb-5">
-            <div class="col-lg-8 mx-auto">
-                <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold mb-3 extra-small">GET IN TOUCH</span>
-                <h2 class="contact-main-title fw-black display-6 mb-3">Contact KU Sports</h2>
-                <p class="contact-sub-text text-muted mb-0">
-                    Have questions about tournaments, club memberships, or sports complex bookings? Reach out to our campus sports administration desk.
-                </p>
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span
+                        class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold mb-3 extra-small">GET
+                        IN TOUCH</span>
+                    <h2 class="contact-main-title fw-black display-6 mb-3">Contact KU Sports</h2>
+                    <p class="contact-sub-text text-muted mb-0">
+                        Have questions about tournaments, club memberships, or sports complex bookings? Reach out to our
+                        campus sports administration desk.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="contact-card p-4 p-md-5 rounded-4 shadow-sm">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label small fw-semibold text-muted">Your Name</label>
-                <input type="text" class="form-control rounded-pill px-3 py-2"
-                    placeholder="Student">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="contact-card p-4 p-md-5 rounded-4 shadow-sm">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-muted">Your Name</label>
+                                <input type="text" class="form-control rounded-pill px-3 py-2" placeholder="Student">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-muted">Email Address</label>
+                                <input type="email" class="form-control rounded-pill px-3 py-2"
+                                    placeholder="student@uok.edu.pk">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold text-muted">Department / Subject</label>
+                                <input type="text" class="form-control rounded-pill px-3 py-2"
+                                    placeholder="Computer Science / Cricket Club Inquiry">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-semibold text-muted">Your Message</label>
+                                <textarea class="form-control rounded-4 px-3 py-2" rows="4"
+                                    placeholder="Write your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success rounded-pill w-100 py-3 fw-bold shadow-sm">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- CONTACT US SECTION END -->
+
+    <!-- FAQ SECTION START -->
+    <section id="faq" class="faq-section py-5">
+        <div class="container py-4">
+
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span
+                        class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold mb-3 extra-small">HELP
+                        & SUPPORT</span>
+                    <h2 class="faq-main-title fw-black display-6 mb-3">Frequently Asked Questions</h2>
+                    <p class="faq-sub-text text-muted mb-0">
+                        Find quick answers regarding university sports registrations and schedules[cite: 1].
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion custom-accordion" id="faqAccordion">
+
+                        <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm overflow-hidden">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fw-bold py-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    How can I join a sports club at Karachi University?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted small pb-4">
+                                    You can visit the Sports Clubs section on this portal, select your desired club
+                                    (such as Cricket or Football), and click on "Join Club" to fill out the student
+                                    registration form[cite: 1].
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-semibold text-muted">Email Address</label>
-                            <input type="email" class="form-control rounded-pill px-3 py-2" placeholder="student@uok.edu.pk">
+
+                        <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm overflow-hidden">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-bold py-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Are there inter-department tournaments held regularly?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted small pb-4">
+                                    Yes, Karachi University organizes inter-department tournaments throughout the
+                                    academic year across various sports categories[cite: 1].
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-semibold text-muted">Department / Subject</label>
-                            <input type="text" class="form-control rounded-pill px-3 py-2" placeholder="Computer Science / Cricket Club Inquiry">
+
+                        <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm overflow-hidden">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold py-3" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    How do I check active tournament schedules?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted small pb-4">
+                                    All live and upcoming match schedules are updated in real-time under the Tournaments
+                                    section of the CampusArena portal[cite: 1].
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-4">
-                            <label class="form-label small fw-semibold text-muted">Your Message</label>
-                            <textarea class="form-control rounded-4 px-3 py-2" rows="4" placeholder="Write your message here..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success rounded-pill w-100 py-3 fw-bold shadow-sm">Send Message</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- FAQ SECTION END -->
+
+    <!-- FOOTER START -->
+    <footer class="footer-section text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 align-items-center pb-4 border-bottom border-secondary">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <a class="navbar-brand fw-bold text-white d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mb-2"
+                        href="#">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>CampusArena <small class="text-muted fs-6 font-monospace">| KU Sports</small></span>
+                    </a>
+                    <p class="text-muted small mb-0">The official digital portal for Karachi University athletics and
+                        sports management[cite: 1].</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mx-2"><a href="#about"
+                                class="text-decoration-none text-muted small">About</a></li>
+                        <li class="list-inline-item mx-2"><a href="#tournaments"
+                                class="text-decoration-none text-muted small">Tournaments</a></li>
+                        <li class="list-inline-item mx-2"><a href="#clubs"
+                                class="text-decoration-none text-muted small">Clubs</a></li>
+                        <li class="list-inline-item mx-2"><a href="#contact"
+                                class="text-decoration-none text-muted small">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex gap-3">
+                        <a href="#"
+                            class="social-icon-box text-white bg-dark rounded-circle d-flex align-items-center justify-content-center text-decoration-none"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="social-icon-box text-white bg-dark rounded-circle d-flex align-items-center justify-content-center text-decoration-none"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="#"
+                            class="social-icon-box text-white bg-dark rounded-circle d-flex align-items-center justify-content-center text-decoration-none"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small mb-0">&copy; 2026 CampusArena | Karachi University. All rights
+                        reserved[cite: 1].</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <form class="d-inline-flex gap-2">
+                        <input type="email" class="form-control form-control-sm rounded-pill px-3"
+                            placeholder="Enter your email">
+                        <button class="btn btn-sm btn-success rounded-pill px-3 fw-bold"
+                            type="submit">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
-
-    </div>
-</section>
-<!-- CONTACT US SECTION END -->
-
-<!-- FAQ SECTION START -->
-<section id="faq" class="faq-section py-5">
-    <div class="container py-4">
-        
-        <div class="row text-center mb-5">
-            <div class="col-lg-8 mx-auto">
-                <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold mb-3 extra-small">HELP & SUPPORT</span>
-                <h2 class="faq-main-title fw-black display-6 mb-3">Frequently Asked Questions</h2>
-                <p class="faq-sub-text text-muted mb-0">
-                    Find quick answers regarding university sports registrations and schedules[cite: 1].
-                </p>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="accordion custom-accordion" id="faqAccordion">
-                    
-                    <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm overflow-hidden">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                How can I join a sports club at Karachi University?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted small pb-4">
-                                You can visit the Sports Clubs section on this portal, select your desired club (such as Cricket or Football), and click on "Join Club" to fill out the student registration form[cite: 1].
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm overflow-hidden">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                Are there inter-department tournaments held regularly?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted small pb-4">
-                                Yes, Karachi University organizes inter-department tournaments throughout the academic year across various sports categories[cite: 1].
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm overflow-hidden">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                                How do I check active tournament schedules?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted small pb-4">
-                                All live and upcoming match schedules are updated in real-time under the Tournaments section of the CampusArena portal[cite: 1].
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- FAQ SECTION END -->
-
-<!-- FOOTER START -->
-<footer class="footer-section text-white pt-5 pb-4">
-    <div class="container">
-        <div class="row g-4 align-items-center pb-4 border-bottom border-secondary">
-            <div class="col-lg-4 text-center text-lg-start">
-                <a class="navbar-brand fw-bold text-white d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mb-2" href="#">
-                   <i class="fa-solid fa-shield-halved"></i>
-                    <span>CampusArena <small class="text-muted fs-6 font-monospace">| KU Sports</small></span>
-                </a>
-                <p class="text-muted small mb-0">The official digital portal for Karachi University athletics and sports management[cite: 1].</p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item mx-2"><a href="#about" class="text-decoration-none text-muted small">About</a></li>
-                    <li class="list-inline-item mx-2"><a href="#tournaments" class="text-decoration-none text-muted small">Tournaments</a></li>
-                    <li class="list-inline-item mx-2"><a href="#clubs" class="text-decoration-none text-muted small">Clubs</a></li>
-                    <li class="list-inline-item mx-2"><a href="#contact" class="text-decoration-none text-muted small">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex gap-3">
-                    <a href="#" class="social-icon-box text-white bg-dark rounded-circle d-flex align-items-center justify-content-center text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon-box text-white bg-dark rounded-circle d-flex align-items-center justify-content-center text-decoration-none"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="social-icon-box text-white bg-dark rounded-circle d-flex align-items-center justify-content-center text-decoration-none"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row pt-4 align-items-center">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="text-muted small mb-0">&copy; 2026 CampusArena | Karachi University. All rights reserved[cite: 1].</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                <form class="d-inline-flex gap-2">
-                    <input type="email" class="form-control form-control-sm rounded-pill px-3" placeholder="Enter your email">
-                    <button class="btn btn-sm btn-success rounded-pill px-3 fw-bold" type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- FOOTER END -->
+    </footer>
+    <!-- FOOTER END -->
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
