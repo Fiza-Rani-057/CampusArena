@@ -12,6 +12,29 @@
     font-size: 14px;
     transition: color 0.2s;
 }
+/* ==================== NAVBAR BRAND STYLING ==================== */
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.navbar-brand i {
+    font-size: 1.2rem;
+}
+.navbar-brand small {
+    font-size: 0.85rem !important;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .navbar-brand {
+    color: #34D399 !important; 
+}
+
+body.dark-mode .navbar-brand small {
+    color: #94a3b8 !important; 
+}
 
 .nav-link:hover, .nav-link.active {
     color: #0a2b23 !important;
