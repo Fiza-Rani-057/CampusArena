@@ -533,3 +533,139 @@ body.dark-mode .club-card {
 body.dark-mode .club-icon-box {
     background-color: rgba(16, 185, 129, 0.15) !important;
 }
+/* ==================== CONTACT, FAQ & FOOTER STYLES ==================== */
+.contact-section, .faq-section {
+    background-color: #f8fafc;
+    transition: background-color 0.3s ease;
+}
+
+.contact-main-title, .faq-main-title {
+    color: #111827;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    border: 1px solid #edf2f7;
+}
+
+/* Accordion Styling */
+.custom-accordion .accordion-item {
+    background-color: #ffffff;
+    border: 1px solid #edf2f7 !important;
+}
+
+.custom-accordion .accordion-button {
+    background-color: transparent;
+    color: #111827;
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #10B981;
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+/* Footer Styling (Dark Deep Green/Slate Theme as in Image) */
+.footer-section {
+    background-color: #07130f !important;
+}
+
+.social-icon-box {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #1e293b;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon-box:hover {
+    background-color: #10B981 !important;
+}
+
+/* ==================== DARK MODE SUPPORT ==================== */
+body.dark-mode .contact-section,
+body.dark-mode .faq-section {
+    background-color: #0f172a !important;
+}
+
+body.dark-mode .contact-main-title,
+body.dark-mode .faq-main-title {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .contact-sub-text,
+body.dark-mode .faq-sub-text {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .contact-card,
+body.dark-mode .custom-accordion .accordion-item {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .custom-accordion .accordion-button {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .custom-accordion .accordion-button:not(.collapsed) {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #34D399 !important;
+}
+
+body.dark-mode .custom-accordion .accordion-body {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .form-control {
+    background-color: #0f172a !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #64748b !important;
+}
+/* ==================== FOOTER STYLING (Fixed Text Visibility) ==================== */
+.footer-section {
+    background-color: #034a32 !important;
+    color: #f8fafc !important;
+}
+
+/* Footer paragraphs, small text, and muted classes ko bright banane ke liye */
+.footer-section p,
+.footer-section small,
+.footer-section .text-muted,
+.footer-section li a {
+    color: #cbd5e1 !important; /* Bright light slate color */
+    transition: color 0.3s ease;
+}
+
+/* Footer links hover effect */
+.footer-section li a:hover {
+    color: #10B981 !important; /* Green hover effect */
+}
+
+/* Footer brand text */
+.footer-section .navbar-brand {
+    color: #ffffff !important;
+}
+
+.footer-section .navbar-brand small {
+    color: #94a3b8 !important;
+}
+
+/* Social icons */
+.social-icon-box {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #1e293b;
+    color: #ffffff !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-icon-box:hover {
+    background-color: #10B981 !important;
+    border-color: #10B981 !important;
+}
