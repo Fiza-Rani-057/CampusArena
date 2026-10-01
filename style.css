@@ -18,6 +18,7 @@
     font-weight: 700;
     text-decoration: none;
     transition: color 0.3s ease;
+    color: #034a32 !important;
 }
 .navbar-brand i {
     font-size: 1.2rem;
@@ -28,12 +29,13 @@
     transition: color 0.3s ease;
 }
 
-body.dark-mode .navbar-brand {
-    color: #34D399 !important; 
+body.dark-mode .navbar.navbar-brand,
+body.dark-mode a.navbar-brand {
+    color: #10B981 !important;
 }
 
 body.dark-mode .navbar-brand small {
-    color: #94a3b8 !important; 
+    color: #f6f8fa !important; 
 }
 
 .nav-link:hover, .nav-link.active {
@@ -413,4 +415,64 @@ body.dark-mode .card-title-dark {
 
 body.dark-mode .about-sub-text {
     color: #94a3b8 !important;
+}
+/* ==================== TOURNAMENTS SECTION STYLES ==================== */
+.tournaments-section {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.tournaments-main-title {
+    color: #111827;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.tournaments-sub-text {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Tournament Card Styling */
+.tournament-card {
+    background-color: #f8fafc;
+    border: 1px solid #edf2f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tournament-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.tournament-footer {
+    border-color: #e2e8f0 !important;
+}
+
+/* ==================== DARK MODE SUPPORT ==================== */
+body.dark-mode .tournaments-section {
+    background-color: #0b1120 !important; /* Thora sa deeper shade section contrast ke liye */
+}
+
+body.dark-mode .tournaments-main-title,
+body.dark-mode .tournament-title-dark {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .tournaments-sub-text,
+body.dark-mode .tournament-card p {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .tournament-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .tournament-footer {
+    border-color: #334155 !important;
+}
+body.dark-mode .tournament-footer .text-muted,
+body.dark-mode .tournament-card small.text-muted {
+    color: #10B981 !important; 
 }
