@@ -476,3 +476,60 @@ body.dark-mode .tournament-footer .text-muted,
 body.dark-mode .tournament-card small.text-muted {
     color: #10B981 !important; 
 }
+/* ==================== SPORTS CLUBS SECTION STYLES ==================== */
+.clubs-section {
+    background-color: #f8fafc;
+    transition: background-color 0.3s ease;
+}
+
+.clubs-main-title {
+    color: #111827;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.clubs-sub-text {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Club Card Styling */
+.club-card {
+    background-color: #ffffff;
+    border: 1px solid #edf2f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.club-icon-box {
+    width: 70px;
+    height: 70px;
+}
+
+/* ==================== DARK MODE SUPPORT ==================== */
+body.dark-mode .clubs-section {
+    background-color: #0f172a !important;
+}
+
+body.dark-mode .clubs-main-title,
+body.dark-mode .club-title-dark {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .clubs-sub-text,
+body.dark-mode .club-card p {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .club-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .club-icon-box {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+}
