@@ -39,3 +39,34 @@ if (savedTheme === "dark") {
     iconElement.classList.remove("fa-sun", "text-warning");
     iconElement.classList.add("fa-moon", "text-dark");
 }
+// GSAP ScrollTrigger Register
+gsap.registerPlugin(ScrollTrigger);
+
+// 1. Sections Fade-in & Slide-up Animation
+gsap.utils.toArray("section").forEach((section) => {
+    gsap.from(section, {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: section,
+            start: "top 85%", // Jab section viewport ke 85% par aaye ga animation start hogi
+            end: "top 50%",
+            toggleActions: "play none none none" // Scroll down karne par play hoga
+        }
+    });
+});
+
+// 2. Tournament ya Sports Cards ke liye Staggered Animation
+gsap.from(".card", {
+    scrollTrigger: {
+        trigger: ".card",
+        start: "top 85%",
+    },
+    opacity: 0,
+    y: 40,
+    duration: 0.8,
+    stagger: 0.2 
+});
+
