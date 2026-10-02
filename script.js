@@ -39,9 +39,9 @@ gsap.utils.toArray("section").forEach((section) => {
         ease: "power2.out",
         scrollTrigger: {
             trigger: section,
-            start: "top 85%", // Jab section viewport ke 85% par aaye ga animation start hogi
+            start: "top 85%", 
             end: "top 50%",
-            toggleActions: "play none none none" // Scroll down karne par play hoga
+            toggleActions: "play none none none" 
         }
     });
 });
