@@ -300,7 +300,7 @@ body.dark-mode .hero-section .trusted-brands-list span i {
 .stats-banner-section {
     background-color: #063127; 
     width: 100%;
-    min-height: 50px;
+    min-height: 70px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     margin-top: -40px;
@@ -311,8 +311,8 @@ body.dark-mode .hero-section .trusted-brands-list span i {
 }
 
 .stat-number {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 50px;
+    font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
 }
