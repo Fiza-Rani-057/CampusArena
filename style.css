@@ -451,7 +451,7 @@ body.dark-mode .about-sub-text {
 
 /* ==================== DARK MODE SUPPORT ==================== */
 body.dark-mode .tournaments-section {
-    background-color: #0b1120 !important; /* Thora sa deeper shade section contrast ke liye */
+    background-color: #0b1120 !important; 
 }
 
 body.dark-mode .tournaments-main-title,
@@ -636,7 +636,7 @@ body.dark-mode .form-control::placeholder {
 
 /* Footer links hover effect */
 .footer-section li a:hover {
-    color: #10B981 !important; /* Green hover effect */
+    color: #10B981 !important; 
 }
 
 /* Footer brand text */
@@ -669,6 +669,6 @@ body.dark-mode .form-control::placeholder {
 }
 
 .contact-section form button[type="submit"]:hover {
-    background-color: #059669 !important; /* Hover karne par thoda dark shade */
+    background-color: #059669 !important;
     border-color: #059669 !important;
 }
