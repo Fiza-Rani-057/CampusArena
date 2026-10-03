@@ -59,3 +59,60 @@ body.dashboard-body {
     .sidebar-container { display: none; }
     .main-viewport { margin-left: 0; max-width: 100%; }
 }
+/* ================= DASHBOARD DARK MODE STYLING ================= */
+body.dark-mode {
+    background-color: #0b1329 !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .sidebar-container {
+    background-color: #0b1329 !important;
+    border-right-color: #1e293b !important;
+}
+
+body.dark-mode .sidebar-container .nav-link {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .sidebar-container .nav-link:hover, 
+body.dark-mode .sidebar-container .nav-link.active {
+    background: #198754 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .value-card {
+    background-color: #111c38 !important;
+    color: #f1f5f9 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid #1e293b !important;
+}
+
+body.dark-mode .top-header h3,
+body.dark-mode .value-card h3,
+body.dark-mode .value-card span,
+body.dark-mode .text-dark {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .search-pill,
+body.dark-mode .btn-group {
+    background-color: #111c38 !important;
+    border-color: #1e293b !important;
+}
+
+body.dark-mode .search-pill input {
+    color: #ffffff !important;
+}
+
+body.dark-mode .search-pill input::placeholder {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .active-tab {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .border-top {
+    border-color: #1e293b !important;
+}
