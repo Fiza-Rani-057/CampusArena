@@ -1,116 +1,217 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusArena | Admin Dashboard</title>
+    <title>CampusArena KU Sports - Admin Dashboard</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="dashboard.css">
 </head>
-<body>
-    <div class="dashboard-wrapper">
+<body class="dashboard-body">
+
+    <div class="app-container">
         <!-- SIDEBAR -->
-        <nav id="sidebar" class="sidebar">
-            <div class="sidebar-brand px-4 py-3">
-                <h4 class="fw-bold text-primary mb-0">Campus<span class="text-white">Arena</span></h4>
-                <small class="text-muted">Sports Admin</small>
+        <aside class="sidebar-container p-3">
+            <div class="sidebar-brand mb-4 px-2 d-flex align-items-center gap-2">
+                <h5 class="fw-bold text-success mb-0 tracking-wider">Campus<span class="text-dark">Arena</span></h5>
             </div>
-            <ul class="nav flex-column px-3 mt-4">
-                <li class="nav-item mb-2"><a href="#" class="nav-link"><i class="fa-solid fa-house me-2"></i> Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link active"><i class="fa-solid fa-chart-pie me-2"></i> Dashboard</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link"><i class="fa-solid fa-trophy me-2"></i> Tournaments</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link"><i class="fa-solid fa-users me-2"></i> Sports Clubs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link"><i class="fa-solid fa-envelope me-2"></i> Messages <span class="badge bg-danger ms-auto">3</span></a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link"><i class="fa-solid fa-gear me-2"></i> Settings</a></li>
+            <ul class="nav flex-column gap-1">
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-house me-2"></i> Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active"><i class="fa-solid fa-chart-pie me-2"></i> Dashboard</a></li>
+                <li class="nav-item"><a href="tournaments.html" class="nav-link"><i class="fa-solid fa-trophy me-2"></i> Tournaments</a></li>
+                <li class="nav-item"><a href="players.html" class="nav-link"><i class="fa-solid fa-users me-2"></i> Players</a></li>
+                <li class="nav-item"><a href="messages.html" class="nav-link d-flex justify-content-between align-items-center"><span><i class="fa-solid fa-envelope me-2"></i> Messages</span> <span class="badge bg-success rounded-pill">3</span></a></li>
+                <li class="nav-item"><a href="matches.html" class="nav-link"><i class="fa-solid fa-futbol me-2"></i> Matches</a></li>
             </ul>
-        </nav>
+            <div class="sidebar-bottom mt-5 px-2">
+                <ul class="nav flex-column gap-1">
+                    <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fa-solid fa-gear me-2"></i> Settings</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-circle-question me-2"></i> Help Center</a></li>
+                </ul>
+            </div>
+        </aside>
 
         <!-- MAIN CONTENT AREA -->
-        <div class="main-content">
+        <main class="main-viewport p-4">
             <!-- TOP NAVBAR -->
-            <header class="top-navbar d-flex justify-content-between align-items-center px-4 py-3 border-bottom">
+            <header class="top-header d-flex justify-content-between align-items-center mb-4">
                 <div class="d-flex align-items-center gap-3">
-                    <button class="btn btn-sm btn-outline-secondary" id="sidebarToggle"><i class="fa-solid fa-bars"></i></button>
-                    <h4 class="mb-0 fw-semibold">Dashboard</h4>
+                    <h3 class="fw-bold mb-0 text-dark">KU Sports Dashboard</h3>
+                    <div class="btn-group bg-white rounded-pill p-1 shadow-sm border">
+                        <button class="btn btn-sm btn-light rounded-pill px-3 active-tab">Overview</button>
+                        <button class="btn btn-sm text-muted">Analytics</button>
+                    </div>
                 </div>
                 <div class="d-flex align-items-center gap-3">
-                    <div class="input-group search-bar">
-                        <span class="input-group-text bg-transparent border-end-0"><i class="fa-solid fa-search text-muted"></i></span>
-                        <input type="text" class="form-control border-start-0 bg-transparent" placeholder="Search...">
-                    </div>
-                    <!-- Theme Toggle Button -->
-                    <button class="btn btn-outline-primary btn-sm rounded-circle" id="themeToggleBtn">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
-                    <div class="admin-profile d-flex align-items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Admin" class="rounded-circle" width="35" height="35">
-                        <span class="d-none d-md-inline fw-medium">Admin User</span>
+                    <div class="input-group search-pill bg-white shadow-sm border px-3 py-1 rounded-pill">
+                        <span class="input-group-text bg-transparent border-0 text-muted p-0 me-2"><i class="fa-solid fa-search"></i></span>
+                        <input type="text" class="form-control border-0 bg-transparent shadow-none p-0" placeholder="Search KU events...">
                     </div>
                 </div>
             </header>
 
-            <!-- DASHBOARD CARDS & GRAPHS CONTAINER -->
-            <div class="container-fluid p-4">
-                <!-- Row 1: Top Stats Cards -->
-                <div class="row g-4 mb-4">
-                    <div class="col-xl-4 col-md-6">
-                        <div class="card dash-card p-3 border-0 shadow-sm">
-                            <span class="text-muted small">Total Tournaments</span>
-                            <h3 class="fw-bold mt-1">24</h3>
-                            <span class="text-success small"><i class="fa-solid fa-arrow-trend-up"></i> +12% this month</span>
+            <!-- GRID CONTAINER -->
+            <div class="container-fluid p-0">
+                <!-- ROW 1: Top 3 Cards -->
+                <div class="row g-3 mb-3">
+                    <div class="col-xl-4 col-md-4">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm">
+                            <div class="d-flex justify-content-between text-muted small mb-1">
+                                <span class="fw-semibold text-secondary">Total Tournaments</span>
+                                <span class="text-success small fw-bold">+5.4% <i class="fa-solid fa-arrow-up"></i></span>
+                            </div>
+                            <h3 class="fw-bold mb-2 text-dark">24</h3>
+                            <div style="height: 35px;"><canvas id="topMiniChart1"></canvas></div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6">
-                        <div class="card dash-card p-3 border-0 shadow-sm">
-                            <span class="text-muted small">Active Players</span>
-                            <h3 class="fw-bold mt-1">523</h3>
-                            <span class="text-success small"><i class="fa-solid fa-arrow-trend-up"></i> +8% increase</span>
+                    <div class="col-xl-4 col-md-4">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm">
+                            <div class="d-flex justify-content-between text-muted small mb-1">
+                                <span class="fw-semibold text-secondary">Registered Players</span>
+                                <span class="text-success small fw-bold">+12.8% <i class="fa-solid fa-arrow-up"></i></span>
+                            </div>
+                            <h3 class="fw-bold mb-2 text-dark">856</h3>
+                            <div style="height: 35px;"><canvas id="topMiniChart2"></canvas></div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-12">
-                        <div class="card dash-card p-3 border-0 shadow-sm">
-                            <span class="text-muted small">Registered Clubs</span>
-                            <h3 class="fw-bold mt-1">12</h3>
-                            <span class="text-info small"><i class="fa-solid fa-shield-halved"></i> All verified</span>
+                    <div class="col-xl-4 col-md-4">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm">
+                            <div class="d-flex justify-content-between text-muted small mb-1">
+                                <span class="fw-semibold text-secondary">Active Matches</span>
+                                <span class="text-success small fw-bold">+8.2% <i class="fa-solid fa-arrow-up"></i></span>
+                            </div>
+                            <h3 class="fw-bold mb-2 text-dark">18</h3>
+                            <div style="height: 35px;"><canvas id="topMiniChart3"></canvas></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Row 2: Charts / Analytics Section Layout -->
-                <div class="row g-4">
-                    <!-- Main Site Traffic Graph Card -->
-                    <div class="col-lg-8">
-                        <div class="card dash-card p-4 border-0 shadow-sm h-100">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h5 class="fw-bold mb-0">Site Traffic & Activity</h5>
-                                <span class="badge bg-primary bg-opacity-10 text-primary">Live Data</span>
+                <!-- ROW 2: Middle Section -->
+                <div class="row g-3 mb-3">
+                    <!-- Real-time Data -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm h-100">
+                            <span class="text-dark fw-bold small d-block mb-3">Campus Activities</span>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small">
+                                <span class="text-muted">Cricket Tournaments</span>
+                                <span class="fw-bold text-dark">12</span>
                             </div>
-                            <div class="chart-placeholder d-flex justify-content-center align-items-center text-muted">
-                                <p class="mb-0"><i class="fa-solid fa-chart-line fa-2x mb-2 d-block"></i> Chart integration area (Chart.js)</p>
+                            <div class="progress mb-3" style="height: 4px;"><div class="progress-bar bg-success" style="width: 75%"></div></div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small">
+                                <span class="text-muted">Football League</span>
+                                <span class="fw-bold text-dark">8</span>
+                            </div>
+                            <div class="progress mb-3" style="height: 4px;"><div class="progress-bar bg-success" style="width: 60%"></div></div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 small">
+                                <span class="text-muted">Badminton & Gym</span>
+                                <span class="fw-bold text-dark">24</span>
+                            </div>
+                            <div class="progress mb-3" style="height: 4px;"><div class="progress-bar bg-success" style="width: 85%"></div></div>
+                            <div class="d-flex justify-content-between align-items-center small">
+                                <span class="text-muted">Athletics</span>
+                                <span class="fw-bold text-dark">6</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Devices / Stats Circular Progress Card -->
-                    <div class="col-lg-4">
-                        <div class="card dash-card p-4 border-0 shadow-sm h-100">
-                            <h5 class="fw-bold mb-3">User Devices</h5>
-                            <div class="d-flex flex-column align-items-center justify-content-center my-auto">
-                                <div class="device-circle-mock text-center py-4">
-                                    <h2 class="fw-bold text-primary mb-0">845</h2>
-                                    <small class="text-muted">Total Active Sessions</small>
+
+                    <!-- Site traffic wave chart -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-dark fw-bold small">Sports Portal Traffic</span>
+                                <div class="d-flex gap-3 small text-muted">
+                                    <span><i class="fa-solid fa-circle text-success fs-7"></i> Male Students</span>
+                                    <span><i class="fa-solid fa-circle text-secondary fs-7"></i> Female Students</span>
+                                </div>
+                            </div>
+                            <div style="height: 175px;"><canvas id="siteTrafficChart"></canvas></div>
+                        </div>
+                    </div>
+
+                    <!-- Devices Doughnut Chart -->
+                    <div class="col-lg-3 col-md-12">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-dark fw-bold small">Department Participation</span>
+                                <i class="fa-solid fa-ellipsis-vertical text-muted"></i>
+                            </div>
+                            <div class="my-auto position-relative" style="height: 110px;">
+                                <canvas id="devicesDonutChart"></canvas>
+                            </div>
+                            <div class="d-flex justify-content-around text-muted small border-top pt-2 mt-1">
+                                <span><i class="fa-solid fa-square text-success"></i> CS & SE</span>
+                                <span><i class="fa-solid fa-square text-secondary"></i> Arts</span>
+                                <span><i class="fa-solid fa-square text-dark"></i> Commerce</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3: Bottom Section -->
+                <div class="row g-3">
+                    <!-- Traffic from social -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-dark fw-bold small">Platform Sources</span>
+                                <i class="fa-solid fa-ellipsis-vertical text-muted"></i>
+                            </div>
+                            <div style="height: 155px;"><canvas id="socialPolarChart"></canvas></div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile time on rate Bar Chart -->
+                    <div class="col-lg-5 col-md-6">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-dark fw-bold small">Monthly Match Activity</span>
+                                <i class="fa-solid fa-ellipsis-vertical text-muted"></i>
+                            </div>
+                            <div style="height: 155px;"><canvas id="mobileBarChart"></canvas></div>
+                        </div>
+                    </div>
+
+                    <!-- Pages Progress Sidebar List -->
+                    <div class="col-lg-3 col-md-12">
+                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-dark fw-bold small">Top Sports Events</span>
+                                <span class="text-muted small">View all</span>
+                            </div>
+                            <div class="d-flex flex-column gap-2 small mt-1">
+                                <div>
+                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Cricket Cup</span><span class="fw-bold text-dark">420</span></div>
+                                    <div class="progress" style="height: 4px;"><div class="progress-bar bg-success" style="width: 85%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Football League</span><span class="fw-bold text-dark">310</span></div>
+                                    <div class="progress" style="height: 4px;"><div class="progress-bar bg-success" style="width: 68%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Badminton Open</span><span class="fw-bold text-dark">195</span></div>
+                                    <div class="progress" style="height: 4px;"><div class="progress-bar bg-success" style="width: 45%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Gym Membership</span><span class="fw-bold text-dark">140</span></div>
+                                    <div class="progress" style="height: 4px;"><div class="progress-bar bg-success" style="width: 30%"></div></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom Dashboard Script -->
+    <!-- Custom Chart Script -->
     <script src="dashboard.js"></script>
 </body>
 </html>
