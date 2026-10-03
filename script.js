@@ -58,3 +58,4 @@ gsap.from(".card", {
     stagger: 0.2 
 });
 
+
