@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampusArena KU Sports - Admin Dashboard</title>
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body class="dashboard-body">
-
     <div class="app-container">
         <!-- SIDEBAR -->
         <aside class="sidebar-container p-3">
             <div class="sidebar-brand mb-4 px-2 d-flex align-items-center gap-2">
-                <h5 class="fw-bold text-success mb-0 tracking-wider">Campus<span class="text-dark">Arena</span></h5>
+                <a class="navbar-brand fw-bold text-success d-flex align-items-center gap-2" href="#">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>CampusArena
+                </a>
             </div>
             <ul class="nav flex-column gap-1">
                 <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-house me-2"></i> Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link active"><i class="fa-solid fa-chart-pie me-2"></i> Dashboard</a></li>
-                <li class="nav-item"><a href="tournaments.html" class="nav-link"><i class="fa-solid fa-trophy me-2"></i> Tournaments</a></li>
-                <li class="nav-item"><a href="players.html" class="nav-link"><i class="fa-solid fa-users me-2"></i> Players</a></li>
-                <li class="nav-item"><a href="messages.html" class="nav-link d-flex justify-content-between align-items-center"><span><i class="fa-solid fa-envelope me-2"></i> Messages</span> <span class="badge bg-success rounded-pill">3</span></a></li>
-                <li class="nav-item"><a href="matches.html" class="nav-link"><i class="fa-solid fa-futbol me-2"></i> Matches</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active"><i class="fa-solid fa-chart-pie me-2"></i>
+                        Dashboard</a></li>
+                <li class="nav-item"><a href="tournaments.html" class="nav-link"><i class="fa-solid fa-trophy me-2"></i>
+                        Tournaments</a></li>
+                <li class="nav-item"><a href="players.html" class="nav-link"><i class="fa-solid fa-users me-2"></i>
+                        Players</a></li>
+                <li class="nav-item"><a href="messages.html"
+                        class="nav-link d-flex justify-content-between align-items-center"><span><i
+                                class="fa-solid fa-envelope me-2"></i> Messages</span> <span
+                            class="badge bg-success rounded-pill">3</span></a></li>
+                <li class="nav-item"><a href="matches.html" class="nav-link"><i class="fa-solid fa-futbol me-2"></i>
+                        Matches</a></li>
             </ul>
             <div class="sidebar-bottom mt-5 px-2">
                 <ul class="nav flex-column gap-1">
-                    <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fa-solid fa-gear me-2"></i> Settings</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-circle-question me-2"></i> Help Center</a></li>
+                    <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fa-solid fa-gear me-2"></i>
+                            Settings</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-circle-question me-2"></i>
+                            Help Center</a></li>
                 </ul>
             </div>
         </aside>
@@ -50,8 +58,10 @@
                 </div>
                 <div class="d-flex align-items-center gap-3">
                     <div class="input-group search-pill bg-white shadow-sm border px-3 py-1 rounded-pill">
-                        <span class="input-group-text bg-transparent border-0 text-muted p-0 me-2"><i class="fa-solid fa-search"></i></span>
-                        <input type="text" class="form-control border-0 bg-transparent shadow-none p-0" placeholder="Search KU events...">
+                        <span class="input-group-text bg-transparent border-0 text-muted p-0 me-2"><i
+                                class="fa-solid fa-search"></i></span>
+                        <input type="text" class="form-control border-0 bg-transparent shadow-none p-0"
+                            placeholder="Search KU events...">
                     </div>
                 </div>
             </header>
@@ -64,7 +74,8 @@
                         <div class="card value-card p-3 border-0 rounded-4 shadow-sm">
                             <div class="d-flex justify-content-between text-muted small mb-1">
                                 <span class="fw-semibold text-secondary">Total Tournaments</span>
-                                <span class="text-success small fw-bold">+5.4% <i class="fa-solid fa-arrow-up"></i></span>
+                                <span class="text-success small fw-bold">+5.4% <i
+                                        class="fa-solid fa-arrow-up"></i></span>
                             </div>
                             <h3 class="fw-bold mb-2 text-dark">24</h3>
                             <div style="height: 35px;"><canvas id="topMiniChart1"></canvas></div>
@@ -74,7 +85,8 @@
                         <div class="card value-card p-3 border-0 rounded-4 shadow-sm">
                             <div class="d-flex justify-content-between text-muted small mb-1">
                                 <span class="fw-semibold text-secondary">Registered Players</span>
-                                <span class="text-success small fw-bold">+12.8% <i class="fa-solid fa-arrow-up"></i></span>
+                                <span class="text-success small fw-bold">+12.8% <i
+                                        class="fa-solid fa-arrow-up"></i></span>
                             </div>
                             <h3 class="fw-bold mb-2 text-dark">856</h3>
                             <div style="height: 35px;"><canvas id="topMiniChart2"></canvas></div>
@@ -84,7 +96,8 @@
                         <div class="card value-card p-3 border-0 rounded-4 shadow-sm">
                             <div class="d-flex justify-content-between text-muted small mb-1">
                                 <span class="fw-semibold text-secondary">Active Matches</span>
-                                <span class="text-success small fw-bold">+8.2% <i class="fa-solid fa-arrow-up"></i></span>
+                                <span class="text-success small fw-bold">+8.2% <i
+                                        class="fa-solid fa-arrow-up"></i></span>
                             </div>
                             <h3 class="fw-bold mb-2 text-dark">18</h3>
                             <div style="height: 35px;"><canvas id="topMiniChart3"></canvas></div>
@@ -102,17 +115,23 @@
                                 <span class="text-muted">Cricket Tournaments</span>
                                 <span class="fw-bold text-dark">12</span>
                             </div>
-                            <div class="progress mb-3" style="height: 4px;"><div class="progress-bar bg-success" style="width: 75%"></div></div>
+                            <div class="progress mb-3" style="height: 4px;">
+                                <div class="progress-bar bg-success" style="width: 75%"></div>
+                            </div>
                             <div class="d-flex justify-content-between align-items-center mb-3 small">
                                 <span class="text-muted">Football League</span>
                                 <span class="fw-bold text-dark">8</span>
                             </div>
-                            <div class="progress mb-3" style="height: 4px;"><div class="progress-bar bg-success" style="width: 60%"></div></div>
+                            <div class="progress mb-3" style="height: 4px;">
+                                <div class="progress-bar bg-success" style="width: 60%"></div>
+                            </div>
                             <div class="d-flex justify-content-between align-items-center mb-3 small">
                                 <span class="text-muted">Badminton & Gym</span>
                                 <span class="fw-bold text-dark">24</span>
                             </div>
-                            <div class="progress mb-3" style="height: 4px;"><div class="progress-bar bg-success" style="width: 85%"></div></div>
+                            <div class="progress mb-3" style="height: 4px;">
+                                <div class="progress-bar bg-success" style="width: 85%"></div>
+                            </div>
                             <div class="d-flex justify-content-between align-items-center small">
                                 <span class="text-muted">Athletics</span>
                                 <span class="fw-bold text-dark">6</span>
@@ -136,7 +155,8 @@
 
                     <!-- Devices Doughnut Chart -->
                     <div class="col-lg-3 col-md-12">
-                        <div class="card value-card p-3 border-0 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                        <div
+                            class="card value-card p-3 border-0 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="text-dark fw-bold small">Department Participation</span>
                                 <i class="fa-solid fa-ellipsis-vertical text-muted"></i>
@@ -186,20 +206,32 @@
                             </div>
                             <div class="d-flex flex-column gap-2 small mt-1">
                                 <div>
-                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Cricket Cup</span><span class="fw-bold text-dark">420</span></div>
-                                    <div class="progress" style="height: 4px;"><div class="progress-bar bg-success" style="width: 85%"></div></div>
+                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Cricket
+                                            Cup</span><span class="fw-bold text-dark">420</span></div>
+                                    <div class="progress" style="height: 4px;">
+                                        <div class="progress-bar bg-success" style="width: 85%"></div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Football League</span><span class="fw-bold text-dark">310</span></div>
-                                    <div class="progress" style="height: 4px;"><div class="progress-bar bg-success" style="width: 68%"></div></div>
+                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Football
+                                            League</span><span class="fw-bold text-dark">310</span></div>
+                                    <div class="progress" style="height: 4px;">
+                                        <div class="progress-bar bg-success" style="width: 68%"></div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Badminton Open</span><span class="fw-bold text-dark">195</span></div>
-                                    <div class="progress" style="height: 4px;"><div class="progress-bar bg-success" style="width: 45%"></div></div>
+                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Badminton
+                                            Open</span><span class="fw-bold text-dark">195</span></div>
+                                    <div class="progress" style="height: 4px;">
+                                        <div class="progress-bar bg-success" style="width: 45%"></div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Gym Membership</span><span class="fw-bold text-dark">140</span></div>
-                                    <div class="progress" style="height: 4px;"><div class="progress-bar bg-success" style="width: 30%"></div></div>
+                                    <div class="d-flex justify-content-between mb-1 text-muted"><span>Gym
+                                            Membership</span><span class="fw-bold text-dark">140</span></div>
+                                    <div class="progress" style="height: 4px;">
+                                        <div class="progress-bar bg-success" style="width: 30%"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -214,4 +246,5 @@
     <!-- Custom Chart Script -->
     <script src="dashboard.js"></script>
 </body>
+
 </html>
