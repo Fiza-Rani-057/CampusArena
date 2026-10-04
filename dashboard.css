@@ -31,7 +31,7 @@ body.dashboard-body {
 /* Dark Green Hover & Focus State */
 .sidebar-container .nav-link:hover, 
 .sidebar-container .nav-link.active {
-    background: #198754 !important;
+    background: #03321c !important;
     color: #ffffff !important;
 }
 
