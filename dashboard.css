@@ -28,7 +28,6 @@ body.dashboard-body {
     transition: 0.2s;
 }
 
-/* Dark Green Hover & Focus State */
 .sidebar-container .nav-link:hover, 
 .sidebar-container .nav-link.active {
     background: #03321c !important;
