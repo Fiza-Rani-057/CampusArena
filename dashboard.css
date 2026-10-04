@@ -115,3 +115,26 @@ body.dark-mode .active-tab {
 body.dark-mode .border-top {
     border-color: #1e293b !important;
 }
+/* Page Sections */
+
+#tournaments {
+    display: none;
+}
+
+#tournaments:target {
+    display: block;
+}
+
+.main-viewport:has(#tournaments:target) #dashboard {
+    display: none;
+}
+/* Tournaments active */
+body:has(#tournaments:target) .sidebar-container a[href="#tournaments"] {
+    background: #013e22 !important;
+    color: #fff !important;
+}
+/* Dashboard active */
+body:not(:has(#tournaments:target)) .sidebar-container a[href="#dashboard"] {
+    background: #01301a !important;
+    color: #fff !important;
+}

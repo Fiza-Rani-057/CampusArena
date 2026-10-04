@@ -112,3 +112,33 @@ if (savedTheme === "dark") {
 } else {
     document.body.classList.remove("dark-mode");
 }
+// Tournaments Top 4 Mini Charts (Dark Green Theme)
+const tourneyMiniOpts = {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { enabled: false } },
+    scales: { x: { display: false }, y: { display: false } },
+    elements: { line: { tension: 0.4, borderWidth: 2 }, point: { radius: 0 } }
+};
+
+['tourneyMini1', 'tourneyMini2', 'tourneyMini3', 'tourneyMini4'].forEach((id, idx) => {
+    const el = document.getElementById(id);
+    if(el) {
+        new Chart(el, {
+            type: 'line',
+            data: { labels: ['1','2','3','4','5','6'], datasets: [{ data: [12, 18, 15, 25, 20, 30], borderColor: '#198754', backgroundColor: 'rgba(25, 135, 84, 0.1)', fill: true }] },
+            options: tourneyMiniOpts
+        });
+    }
+});
+
+// Bottom small cards charts
+['footMiniChart', 'badmintonMiniChart'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) {
+        new Chart(el, {
+            type: 'line',
+            data: { labels: ['1','2','3','4','5','6'], datasets: [{ data: [10, 22, 14, 28, 24, 35], borderColor: '#198754', backgroundColor: 'rgba(25, 135, 84, 0.08)', fill: true }] },
+            options: tourneyMiniOpts
+        });
+    }
+});
