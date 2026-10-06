@@ -261,7 +261,7 @@
                         <button id="addTournamentBtn"
                             class="btn btn-success rounded-pill px-4 py-2 fw-semibold text-white shadow-sm d-inline-flex align-items-center justify-content-center text-nowrap"
                             style="background-color: #198754; border-color: #198754; font-size: 15px;">
-                     <i class="fa-solid fa-plus me-2"></i> Add Tournament
+                            <i class="fa-solid fa-plus me-2"></i> Add Tournament
                         </button>
                     </div>
                 </header>
@@ -289,12 +289,13 @@
                                             Now</span></td>
                                     <td class="text-end">
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i
+                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
                                                 class="fa-solid fa-eye"></i></button>
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
                                                 class="fa-solid fa-pen"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
+                                            id="delete-btn"
                                             style="color: #03321c !important; border: none !important; background: transparent !important;"
                                             title="Delete">
                                             <i class="fa-solid fa-trash"></i>
@@ -311,12 +312,13 @@
                                     </td>
                                     <td class="text-end">
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i
+                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
                                                 class="fa-solid fa-eye"></i></button>
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
                                                 class="fa-solid fa-pen"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
+                                            id="delete-btn"
                                             style="color: #03321c !important; border: none !important; background: transparent !important;"
                                             title="Delete">
                                             <i class="fa-solid fa-trash"></i>
@@ -334,12 +336,13 @@
                                             Open</span></td>
                                     <td class="text-end">
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i
+                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
                                                 class="fa-solid fa-eye"></i></button>
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
                                                 class="fa-solid fa-pen"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
+                                            id="delete-btn"
                                             style="color: #03321c !important; border: none !important; background: transparent !important;"
                                             title="Delete">
                                             <i class="fa-solid fa-trash"></i>
@@ -357,12 +360,13 @@
                                     </td>
                                     <td class="text-end">
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i
+                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
                                                 class="fa-solid fa-eye"></i></button>
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
                                                 class="fa-solid fa-pen"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
+                                            id="delete-btn"
                                             style="color: #03321c !important; border: none !important; background: transparent !important;"
                                             title="Delete">
                                             <i class="fa-solid fa-trash"></i>
@@ -380,12 +384,13 @@
                                     </td>
                                     <td class="text-end">
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i
+                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
                                                 class="fa-solid fa-eye"></i></button>
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
                                                 class="fa-solid fa-pen"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
+                                            id="delete-btn"
                                             style="color: #03321c !important; border: none !important; background: transparent !important;"
                                             title="Delete">
                                             <i class="fa-solid fa-trash"></i>
@@ -402,11 +407,11 @@
             <div class="modal fade" id="addTournamentModal" tabindex="-1" aria-labelledby="addTournamentModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content border-0 rounded-4 shadow-lg value-card">
+                    <div class="modal-content border-0 rounded-4 shadow-lg value-card">
                         <div class="modal-header border-bottom">
-             <h5 class="modal-title fw-bold text-dark" id="addTournamentModalLabel">Add New Tournament
+                            <h5 class="modal-title fw-bold text-dark" id="addTournamentModalLabel">Add New Tournament
                             </h5>
-                           <button type="button" class="btn-close"></button>
+                            <button type="button" class="btn-close"></button>
                         </div>
                         <div class="modal-body">
                             <form id="addTournamentForm">
@@ -441,9 +446,9 @@
                                 <div class="text-end mt-4">
                                     <button type="button" class="btn btn-light rounded-pill px-4 me-2"
                                         id="cancelBtn">Cancel</button>
-                             <button type="submit" id="saveBtn"
-                          class="btn btn-success rounded-pill px-4 text-white fw-semibold"
-                  style="background-color: #198754; border-color: #198754;">Save
+                                    <button type="submit" id="saveBtn"
+                                        class="btn btn-success rounded-pill px-4 text-white fw-semibold"
+                                        style="background-color: #198754; border-color: #198754;">Save
                                         Tournament</button>
                                 </div>
                             </form>

@@ -183,12 +183,12 @@ addTournamentForm.addEventListener('submit', (e) => {
    <td class="text-end">
    <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
         style="color: #03321c !important;" title="View"><i
-       class="fa-solid fa-eye"></i></button>
+      id = "veiw-btn"  class="fa-solid fa-eye"></i></button>
         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-         style="color: #03321c !important;" title="Edit"><i
+         id = "edit-btn"  style="color: #03321c !important;" title="Edit"><i
           class="fa-solid fa-pen"></i></button>
          <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
-                 style="color: #03321c !important; border: none !important; background: transparent !important;"
+          id = "delete-btn" style="color: #03321c !important; border: none !important; background: transparent !important;"
       title="Delete">
        <i class="fa-solid fa-trash"></i>
            </button>
