@@ -161,8 +161,41 @@ const closeBtn = document.querySelector('.btn-close');
 closeBtn.addEventListener('click', () => {
     modal.hide();
 });
+const addTournamentForm = document.querySelector('#addTournamentForm');
+const saveBtn = document.querySelector('#saveBtn');
+addTournamentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
- const saveBtn = document.querySelector('.saveBtn');
- saveBtn.addEventListener('click', ()=>{
-    
- })
+    const tournamentName = addTournamentForm.querySelector('input[type="text"]').value;
+    const sport = addTournamentForm.querySelector('select').value;
+    const date = addTournamentForm.querySelector('input[type="date"]').value;
+    const status = addTournamentForm.querySelectorAll('select')[1].value;
+
+    const tablebody = document.querySelector('tbody');
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+<td class="fw-bold text-dark">${tournamentName}</td>
+ <td><span class="badge bg-light text-dark border">${sport}</span></td>
+   <td class="text-muted small">${date}</td>
+ <td><span class="badge bg-primary bg-opacity-10 
+  text-primary px-2 py-1" style="color: #03321c !important;
+  background-color: #ddf3e9!important;">${status}</span>
+    </td>
+   <td class="text-end">
+   <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+        style="color: #03321c !important;" title="View"><i
+       class="fa-solid fa-eye"></i></button>
+        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+         style="color: #03321c !important;" title="Edit"><i
+          class="fa-solid fa-pen"></i></button>
+         <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
+                 style="color: #03321c !important; border: none !important; background: transparent !important;"
+      title="Delete">
+       <i class="fa-solid fa-trash"></i>
+           </button>
+        </td>
+    `
+    tablebody.appendChild(newRow);
+    addTournamentForm.reset();
+    modal.hide();
+});
