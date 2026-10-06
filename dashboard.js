@@ -182,8 +182,8 @@ addTournamentForm.addEventListener('submit', (e) => {
     </td>
    <td class="text-end">
    <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-        style="color: #03321c !important;" title="View"><i
-      id = "veiw-btn"  class="fa-solid fa-eye"></i></button>
+       id = "veiw-btn" style="color: #03321c !important;" title="View"><i
+     class="fa-solid fa-eye"></i></button>
         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
          id = "edit-btn"  style="color: #03321c !important;" title="Edit"><i
           class="fa-solid fa-pen"></i></button>
@@ -199,7 +199,7 @@ addTournamentForm.addEventListener('submit', (e) => {
     modal.hide();
 });
 
-
+//  ===================== Delete Button ====================
 const deleteBtns = document.querySelectorAll('#delete-btn');
 const delModal = document.querySelector('#deleteConfirmModal');
 const deleteModal = new bootstrap.Modal(delModal);
@@ -216,4 +216,34 @@ const confirmAction = document.querySelector('#confirmDeleteBtn');
 confirmAction.addEventListener('click', () => {
     selectedRow.remove();
     deleteModal.hide();
+});
+
+//  =================== Veiw Button ==================
+
+const veiwModal = document.querySelector('#viewTournamentModal');
+const veiwBtns = document.querySelectorAll('#veiw-btn');
+const Modal = new bootstrap.Modal(veiwModal);
+
+const viewBtns = document.querySelectorAll('.view-btn');
+
+const viewModalElement = document.querySelector('#viewTournamentModal');
+const viewModal = new bootstrap.Modal(viewModalElement);
+
+viewBtns.forEach((viewBtn) => {
+    viewBtn.addEventListener('click', () => {
+        const row = viewBtn.closest('tr');
+
+        const name = row.children[0].textContent;
+        const sport = row.children[1].textContent;
+        const date = row.children[2].textContent;
+        const status = row.children[3].textContent;
+
+        document.querySelector('#viewTournamentName').textContent = name;
+        document.querySelector('#viewTournamentSport').textContent = sport;
+        document.querySelector('#viewTournamentDate').textContent = date;
+        document.querySelector('#viewTournamentStatus').textContent = status;
+
+        viewModal.show();
+
+    });
 });

@@ -288,8 +288,8 @@
                                     <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1">Live
                                             Now</span></td>
                                     <td class="text-end">
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="veiw-btn"
+                                            style="color: #03321c !important;" title="View"><i
                                                 class="fa-solid fa-eye"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
@@ -311,8 +311,8 @@
                                             style="color: #03321c !important; background-color: #ddf3e9 !important;">Upcoming</span>
                                     </td>
                                     <td class="text-end">
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="veiw-btn"
+                                            style="color: #03321c !important;" title="View"><i
                                                 class="fa-solid fa-eye"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
@@ -335,8 +335,8 @@
                                           background-color: #ddf3e9!important;">Registration
                                             Open</span></td>
                                     <td class="text-end">
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="veiw-btn"
+                                            style="color: #03321c !important;" title="View"><i
                                                 class="fa-solid fa-eye"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
@@ -359,8 +359,8 @@
                           background-color: #ddf3e9!important;">Upcoming</span>
                                     </td>
                                     <td class="text-end">
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="veiw-btn"
+                                            style="color: #03321c !important;" title="View"><i
                                                 class="fa-solid fa-eye"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
@@ -383,8 +383,8 @@
                       background-color: #ddf3e9!important;">Planning</span>
                                     </td>
                                     <td class="text-end">
-                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-                                            style="color: #03321c !important;" title="View"><i id="veiw-btn"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="veiw-btn"
+                                            style="color: #03321c !important;" title="View"><i
                                                 class="fa-solid fa-eye"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white" id="edit-btn"
                                             style="color: #03321c !important;" title="Edit"><i
@@ -457,28 +457,79 @@
                 </div>
             </div>
             <!-- ================= DELETE CONFIRMATION MODAL ================= -->
-<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
-        <div class="modal-content border-0 rounded-4 shadow-lg value-card text-center p-3">
-            <div class="modal-body py-4">
-                <div class="mb-3 text-danger fs-1">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                </div>
-                <h5 class="fw-bold text-dark mb-2" id="deleteConfirmModalLabel">Are you sure?</h5>
-                <p class="text-muted small mb-4">Do you really want to delete this tournament? This action cannot be undone.</p>
-                <div class="d-flex justify-content-center gap-2">
-                    <button type="button" class="btn btn-light rounded-pill 
-                px-3 py-2 small fw-semibold" data-bs-dismiss="modal"
-                 id="cancelBtn">Cancel</button>
-                    <button type="button" class="btn btn-danger 
-                    rounded-pill px-3 py-2 small fw-semibold text-white" 
-                    id="confirmDeleteBtn">Delete</button>
+            <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                    <div class="modal-content border-0 rounded-4 shadow-lg value-card text-center p-3">
+                        <div class="modal-body py-4">
+                            <div class="mb-3 text-danger fs-1">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" id="deleteConfirmModalLabel">Are you sure?</h5>
+                            <p class="text-muted small mb-4">Do you really want to delete this tournament? This action
+                                cannot be undone.</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <button type="button" class="btn btn-light rounded-pill 
+                px-3 py-2 small fw-semibold" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+                                <button type="button" class="btn btn-danger 
+                    rounded-pill px-3 py-2 small fw-semibold text-white" id="confirmDeleteBtn">Delete</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
+            <!-- ================= VIEW TOURNAMENT MODAL ================= -->
+            <div class="modal fade" id="viewTournamentModal" tabindex="-1" aria-labelledby="viewTournamentModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 rounded-4 shadow-lg value-card">
+                        <div class="modal-header border-bottom">
+                            <h5 class="modal-title fw-bold text-dark" id="viewTournamentModalLabel">Tournament Details
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body py-4">
+                            <!-- Tournament Name -->
+                            <div class="mb-3">
+                                <span class="text-muted small d-block mb-1">Tournament Name</span>
+                                <h5 class="fw-bold text-dark mb-0" id="viewTournamentName">Inter-Department T20 Cup</h5>
+                            </div>
+                            <!-- Sport & Status -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-6">
+                                    <span class="text-muted small d-block mb-1">Sport Category</span>
+                                    <span class="badge bg-light text-dark border px-2 py-1"
+                                        id="viewTournamentSport">Cricket</span>
+                                </div>
+                                <div class="col-6">
+                                    <span class="text-muted small d-block mb-1">Status</span>
+                                    <span class="badge bg-success bg-opacity-10 text-success px-2 py-1"
+                                        id="viewTournamentStatus">Live Now</span>
+                                </div>
+                            </div>
+                            <!-- Start Date -->
+                            <div class="mb-3">
+                                <span class="text-muted small d-block mb-1">Start Date</span>
+                                <span class="fw-semibold text-dark">
+                                    <i class="fa-regular fa-calendar text-success me-1"></i>
+                                    <span id="viewTournamentDate">Oct 15, 2026</span>
+                                </span>
+                            </div>
+                            <!-- Description -->
+                            <div class="mb-3">
+                                <span class="text-muted small d-block mb-1">Description / Venue</span>
+                                <p class="text-muted small mb-0" id="viewTournamentDescription">CS & Software
+                                    Engineering vs Commerce Department at the main campus ground.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-top">
+                            <button type="button" class="btn btn-success rounded-pill px-4 text-white fw-semibold"
+                                data-bs-dismiss="modal"
+                                style="background-color: #198754; border-color: #198754;">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="dashboard.js"></script>
