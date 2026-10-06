@@ -237,7 +237,200 @@
                     </div>
                 </div>
             </div>
-            <!-- Tournaments Section for CampusArena -->
+            <!-- ================= TOURNAMENTS SECTION (TABLE VIEW & MANAGEMENT) ================= -->
+
+            <section id="tournaments" class="admin-section container-fluid p-0">
+
+                <!-- Top Header -->
+                <header class="top-header d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                    <div>
+                        <h3 class="fw-bold mb-0 text-dark">Tournaments Management</h3>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="input-group search-pill bg-white shadow-sm border px-3 py-1 rounded-pill"
+                            style="max-width: 240px;">
+                            <span class="input-group-text bg-transparent border-0 text-muted p-0 me-2"><i
+                                    class="fa-solid fa-search"></i></span>
+                            <input type="text" class="form-control border-0 bg-transparent shadow-none p-0"
+                                placeholder="Search tournaments...">
+                        </div>
+                        <!-- Add Tournament Button Trigger Modal -->
+                        <button
+                            class="btn btn-success rounded-pill px-4 py-2 fw-semibold text-white shadow-sm d-inline-flex align-items-center justify-content-center text-nowrap"
+                            data-bs-toggle="modal" data-bs-target="#addTournamentModal"
+                            style="background-color: #198754; border-color: #198754; font-size: 15px;">
+                            <i class="fa-solid fa-plus me-2"></i> Add Tournament
+                        </button>
+                    </div>
+                </header>
+
+                <!-- Tournaments Table Card -->
+                <div class="card value-card border-0 rounded-4 shadow-sm p-3">
+                    <div class="table-responsive">
+                        <table class="table align-middle mb-0">
+                            <thead>
+                                <tr class="text-muted small border-bottom">
+                                    <th class="py-3">Tournament Name</th>
+                                    <th class="py-3">Sport</th>
+                                    <th class="py-3">Date</th>
+                                    <th class="py-3">Status</th>
+                                    <th class="py-3 text-end">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="fw-bold text-dark">Inter-Department T20 Cup</td>
+                                    <td><span class="badge bg-light text-dark border">Cricket</span></td>
+                                    <td class="text-muted small">Oct 15, 2026</td>
+                                    <td><span class="badge bg-success bg-opacity-10 text-success px-2 py-1">Live
+                                            Now</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="View"><i
+                                                class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="Edit"><i
+                                                class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger rounded-pill px-2 py-1"
+                                            title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="fw-bold text-dark">KU Champions League</td>
+                                    <td><span class="badge bg-light text-dark border">Football</span></td>
+                                    <td class="text-muted small">Oct 25, 2026</td>
+                                    <td><span
+                                            class="badge bg-primary bg-opacity-10 text-primary px-2 py-1">Upcoming</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="View"><i
+                                                class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="Edit"><i
+                                                class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger rounded-pill px-2 py-1"
+                                            title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td class="fw-bold text-dark">Sports Club Open Smash</td>
+                                    <td><span class="badge bg-light text-dark border">Badminton</span></td>
+                                    <td class="text-muted small">Nov 02, 2026</td>
+                                    <td><span class="badge bg-warning bg-opacity-10 text-warning px-2 py-1">Registration
+                                            Open</span></td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="View"><i
+                                                class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="Edit"><i
+                                                class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger rounded-pill px-2 py-1"
+                                            title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="fw-bold text-dark">Inter-Faculty Basketball Championship</td>
+                                    <td><span class="badge bg-light text-dark border">Basketball</span></td>
+                                    <td class="text-muted small">Nov 12, 2026</td>
+                                    <td><span
+                                            class="badge bg-primary bg-opacity-10 text-primary px-2 py-1">Upcoming</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="View"><i
+                                                class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="Edit"><i
+                                                class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger rounded-pill px-2 py-1"
+                                            title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td class="fw-bold text-dark">KU Annual Athletics Meet</td>
+                                    <td><span class="badge bg-light text-dark border">Athletics</span></td>
+                                    <td class="text-muted small">Dec 01, 2026</td>
+                                    <td><span
+                                            class="badge bg-secondary bg-opacity-10 text-secondary px-2 py-1">Planning</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="View"><i
+                                                class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                            style="background-color: #198754; border-color: #198754;" title="Edit"><i
+                                                class="fa-solid fa-pen"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger rounded-pill px-2 py-1"
+                                            title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= ADD TOURNAMENT MODAL ================= -->
+            <div class="modal fade" id="addTournamentModal" tabindex="-1" aria-labelledby="addTournamentModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 rounded-4 shadow-lg value-card">
+                        <div class="modal-header border-bottom">
+                            <h5 class="modal-title fw-bold text-dark" id="addTournamentModalLabel">Add New Tournament
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="addTournamentForm">
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold text-muted">Tournament Name</label>
+                                    <input type="text" class="form-control bg-light border-0"
+                                        placeholder="e.g. KU Cricket Super League" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold text-muted">Sport Category</label>
+                                    <select class="form-select bg-light border-0" required>
+                                        <option value="">Select Sport</option>
+                                        <option value="Cricket">Cricket</option>
+                                        <option value="Football">Football</option>
+                                        <option value="Badminton">Badminton</option>
+                                        <option value="Basketball">Basketball</option>
+                                        <option value="Athletics">Athletics</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold text-muted">Start Date</label>
+                                    <input type="date" class="form-control bg-light border-0" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-semibold text-muted">Status</label>
+                                    <select class="form-select bg-light border-0" required>
+                                        <option value="Upcoming">Upcoming</option>
+                                        <option value="Live Now">Live Now</option>
+                                        <option value="Registration Open">Registration Open</option>
+                                    </select>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button type="button" class="btn btn-light rounded-pill px-4 me-2"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit"
+                                        class="btn btn-success rounded-pill px-4 text-white fw-semibold"
+                                        style="background-color: #198754; border-color: #198754;">Save
+                                        Tournament</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="dashboard.js"></script>
