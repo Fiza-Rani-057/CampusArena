@@ -341,7 +341,7 @@ body.dark-mode #tournaments .custom-delete-btn:hover {
 body.dark-mode #tournaments .custom-delete-btn {
     border: none !important;
 }
-body.dark-mode #tournaments .view-btn,
+
 body.dark-mode #tournaments .edit-btn,
 body.dark-mode #tournaments .custom-delete-btn {
     background-color: #b7f7d4 !important;
@@ -350,8 +350,19 @@ body.dark-mode #tournaments .custom-delete-btn {
 }
 
 /* Icons */
-body.dark-mode #tournaments .view-btn i,
+
 body.dark-mode #tournaments .edit-btn i,
 body.dark-mode #tournaments .custom-delete-btn i {
+    color: #03321c !important;
+}
+body.dark-mode #tournaments .view-btn i {
+    background-color: #a6e6d0 !important;
+}
+body.dark-mode #tournaments button.view-btn {
+    background-color: #b7f7d4 !important;
+    border: 1px solid #b7f7d4 !important;
+}
+
+body.dark-mode #tournaments button.view-btn i {
     color: #03321c !important;
 }

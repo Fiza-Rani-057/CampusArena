@@ -187,64 +187,64 @@ addTournamentForm.addEventListener('submit', (e) => {
   ${status}</span></td>
 
     <td class="text-end">
-        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white view-btn"
-            style="color: #03321c !important;"
-            title="View">
-            <i class="fa-solid fa-eye"></i>
-        </button>
-        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white edit-btn"
-             id = "updateTournamentBtn"  style="color: #03321c !important;"
-            title="Edit">
+         <button class="btn btn-sm rounded-pill 
+           px-2 py-1 me-1 text-white view-btn" id="veiw-btn"
+           style="color: #03321c !important;" title="View"><i
+           class="fa-solid fa-eye"></i></button>
+            <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white edit-btn"
+            id="updateTournamentBtn" style="color: #03321c !important;" title="Edit">
             <i class="fa-solid fa-pen"></i>
-        </button>
-        <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
-         style="color: #03321c !important; border: none !important; background: transparent !important;"
+            </button>
+             <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
+               id="delete-btn"
+             style="color: #03321c; border: none !important; 
+            background: transparent ;"
             title="Delete">
-            <i class="fa-solid fa-trash"></i>
-        </button>
+                <i class="fa-solid fa-trash"></i>
+             </button>
     </td>
 `;
     tablebody.appendChild(newRow);
 
     // New row veiw btn 
     const newViewBtn = newRow.querySelector('.view-btn');
-newViewBtn.addEventListener('click', () => {
-    const name = newRow.children[0].textContent;
-    const sport = newRow.children[1].textContent;
-    const date = newRow.children[2].textContent;
-    const status = newRow.children[3].textContent;
+    newViewBtn.addEventListener('click', () => {
+        const name = newRow.children[0].textContent;
+        const sport = newRow.children[1].textContent;
+        const date = newRow.children[2].textContent;
+        const status = newRow.children[3].textContent;
 
-    document.querySelector('#viewTournamentName').textContent = name;
-    document.querySelector('#viewTournamentSport').textContent = sport;
-    document.querySelector('#viewTournamentDate').textContent = date;
-    document.querySelector('#viewTournamentStatus').textContent = status;
+        document.querySelector('#viewTournamentName').textContent = name;
+        document.querySelector('#viewTournamentSport').textContent = sport;
+        document.querySelector('#viewTournamentDate').textContent = date;
+        document.querySelector('#viewTournamentStatus').textContent = status;
 
-    // New edit btn 
-    const newEditBtn = newRow.querySelector('.edit-btn');
-newEditBtn.addEventListener('click', () => {
-    editRow = newRow;
-    document.querySelector('#editTournamentName').value =
-        newRow.children[0].textContent.trim();
-    document.querySelector('#editSportCategory').value =
-        newRow.children[1].textContent.trim();
-    document.querySelector('#editTournamentDate').value =
-        newRow.children[2].textContent.trim();
-    document.querySelector('#editTournamentStatus').value =
-        newRow.children[3].textContent.trim();
-    editModal.show();
+        // New edit btn 
+        const newEditBtn = newRow.querySelector('.edit-btn');
+        newEditBtn.addEventListener('click', () => {
+            editRow = newRow;
+            document.querySelector('#editTournamentName').value =
+                newRow.children[0].textContent.trim();
+            document.querySelector('#editSportCategory').value =
+                newRow.children[1].textContent.trim();
+            document.querySelector('#editTournamentDate').value =
+                newRow.children[2].textContent.trim();
+            document.querySelector('#editTournamentStatus').value =
+                newRow.children[3].textContent.trim();
+            editModal.show();
 
-});
+        });
 
-    viewModal.show();
-});
-//   New Row delete btn 
-const newDeleteBtn = newRow.querySelector('.custom-delete-btn');
-newDeleteBtn.addEventListener('click', () => {
-    selectedRow = newRow;
-    deleteModal.show();
-});
+        viewModal.show();
+    });
+    //   New Row delete btn 
+    const newDeleteBtn = newRow.querySelector('.custom-delete-btn');
+    newDeleteBtn.addEventListener('click', () => {
+        selectedRow = newRow;
+        deleteModal.show();
+    });
     totaltournaments++;
-  totalTournaments.textContent = totaltournaments;
+    totalTournaments.textContent = totaltournaments;
 
     addTournamentForm.reset();
     modal.hide();
@@ -267,9 +267,9 @@ const confirmAction = document.querySelector('#confirmDeleteBtn');
 confirmAction.addEventListener('click', () => {
     selectedRow.remove();
     totaltournaments--;
-totalTournaments.textContent = totaltournaments;
+    totalTournaments.textContent = totaltournaments;
 
-deleteModal.hide();
+    deleteModal.hide();
     deleteModal.hide();
 });
 
@@ -283,7 +283,7 @@ const Modal = new bootstrap.Modal(veiwModal);
 const viewModalElement = document.querySelector('#viewTournamentModal');
 const viewModal = new bootstrap.Modal(viewModalElement);
 
- veiwBtns.forEach((viewBtn) => {
+veiwBtns.forEach((viewBtn) => {
     viewBtn.addEventListener('click', () => {
         const row = viewBtn.closest('tr');
 
