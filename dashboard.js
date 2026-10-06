@@ -198,3 +198,17 @@ addTournamentForm.addEventListener('submit', (e) => {
     addTournamentForm.reset();
     modal.hide();
 });
+
+const deleteBtn = document.querySelector('#delete-btn');
+const delModal = document.querySelector('#deleteConfirmModal');
+const deleteModal = new bootstrap.Modal(delModal);
+
+deleteBtn.addEventListener('click', () => {
+    deleteModal.show();
+});
+
+const confirmAction = document.querySelector('#confirmDeleteBtn');
+confirmAction.addEventListener('click', () => {
+
+    deleteModal.hide();
+});
