@@ -104,6 +104,7 @@ new Chart(document.getElementById('mobileBarChart'), {
         }
     }
 });
+
 // ================= AUTOMATIC GLOBAL THEME LOADER =================
 const savedTheme = localStorage.getItem("theme");
 
@@ -142,8 +143,12 @@ const tourneyMiniOpts = {
         });
     }
 });
-
+//   ====================Chart.js =====================
 // Add tournament modal 
+const totalTournaments = document.querySelector('#total-tournaments');
+let totaltournaments = 24;
+
+totalTournaments.textContent = totaltournaments;
 
 const addTournament = document.querySelector('#addTournamentModal');
 const addTournamentbtn = document.querySelector('#addTournamentBtn');
@@ -195,6 +200,9 @@ addTournamentForm.addEventListener('submit', (e) => {
         </td>
     `
     tablebody.appendChild(newRow);
+    totaltournaments++;
+  totalTournaments.textContent = totaltournaments;
+
     addTournamentForm.reset();
     modal.hide();
 });
@@ -215,6 +223,11 @@ deleteBtns.forEach((deleteBtn) => {
 const confirmAction = document.querySelector('#confirmDeleteBtn');
 confirmAction.addEventListener('click', () => {
     selectedRow.remove();
+
+    totaltournaments--;
+totalTournaments.textContent = totaltournaments;
+
+deleteModal.hide();
     deleteModal.hide();
 });
 
@@ -246,3 +259,5 @@ const viewModal = new bootstrap.Modal(viewModalElement);
 
     });
 });
+
+
