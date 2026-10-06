@@ -224,12 +224,11 @@ const veiwModal = document.querySelector('#viewTournamentModal');
 const veiwBtns = document.querySelectorAll('#veiw-btn');
 const Modal = new bootstrap.Modal(veiwModal);
 
-const viewBtns = document.querySelectorAll('.view-btn');
 
 const viewModalElement = document.querySelector('#viewTournamentModal');
 const viewModal = new bootstrap.Modal(viewModalElement);
 
-viewBtns.forEach((viewBtn) => {
+ veiwBtns.forEach((viewBtn) => {
     viewBtn.addEventListener('click', () => {
         const row = viewBtn.closest('tr');
 
