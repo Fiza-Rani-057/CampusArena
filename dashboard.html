@@ -237,6 +237,166 @@
                     </div>
                 </div>
             </div>
+            <!-- Tournaments Section -->
+            <section id="tournaments" class="max-w-7xl mx-auto px-4 py-10">
+
+                <!-- Header Section -->
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 text-center md:text-left">
+                            Active & Upcoming Tournaments
+                        </h1>
+                        <p class="text-gray-600 text-sm md:text-base mt-1 text-center md:text-left">
+                            Stay updated with the latest inter-departmental sports events, match schedules, and live
+                            championship standings across Karachi University.
+                        </p>
+                    </div>
+                    <!-- Add Tournament Button -->
+                    <button onclick="openModal()"
+                        class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-xl shadow-md transition duration-200 flex items-center gap-2">
+                        <i class="fa-solid fa-plus"></i> Add Tournament
+                    </button>
+                </div>
+
+                <!-- Tournaments Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Card 1: Live Now -->
+                    <div
+                        class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span
+                                    class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Live
+                                    Now</span>
+                                <span
+                                    class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Cricket</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Inter-Department T20 Cup</h3>
+                            <p class="text-gray-600 text-sm mb-6">CS & Software Engineering vs Commerce Department at
+                                the main campus ground.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center text-gray-500 text-xs mb-4">
+                                <i class="fa-regular fa-calendar-days mr-2 text-emerald-600"></i> Oct 15, 2026
+                            </div>
+                            <div class="border-t border-gray-100 pt-4 flex justify-between items-center">
+                                <span
+                                    class="text-xs font-medium text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100">View
+                                    Schedule</span>
+                                <!-- Admin Action Buttons (View, Edit, Delete) -->
+                                <div class="flex items-center gap-1">
+                                    <button onclick="viewTournament('Inter-Department T20 Cup')"
+                                        class="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition"
+                                        title="View">
+                                        <i class="fa-solid fa-eye text-sm"></i>
+                                    </button>
+                                    <button onclick="editTournament('Inter-Department T20 Cup')"
+                                        class="p-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition"
+                                        title="Edit">
+                                        <i class="fa-solid fa-pen-to-square text-sm"></i>
+                                    </button>
+                                    <button onclick="deleteTournament(this)"
+                                        class="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition"
+                                        title="Delete">
+                                        <i class="fa-solid fa-trash text-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Upcoming -->
+                    <div
+                        class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span
+                                    class="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200">Upcoming</span>
+                                <span
+                                    class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Football</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">KU Champions League</h3>
+                            <p class="text-gray-600 text-sm mb-6">Inter-faculty football championship registration and
+                                group stage draws starting soon.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center text-gray-500 text-xs mb-4">
+                                <i class="fa-regular fa-calendar-days mr-2 text-emerald-600"></i> Oct 25, 2026
+                            </div>
+                            <div class="border-t border-gray-100 pt-4 flex justify-between items-center">
+                                <span
+                                    class="text-xs font-medium text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100">Register
+                                    Now</span>
+                                <!-- Admin Action Buttons (View, Edit, Delete) -->
+                                <div class="flex items-center gap-1">
+                                    <button onclick="viewTournament('KU Champions League')"
+                                        class="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition"
+                                        title="View">
+                                        <i class="fa-solid fa-eye text-sm"></i>
+                                    </button>
+                                    <button onclick="editTournament('KU Champions League')"
+                                        class="p-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition"
+                                        title="Edit">
+                                        <i class="fa-solid fa-pen-to-square text-sm"></i>
+                                    </button>
+                                    <button onclick="deleteTournament(this)"
+                                        class="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition"
+                                        title="Delete">
+                                        <i class="fa-solid fa-trash text-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Registration Open -->
+                    <div
+                        class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span
+                                    class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Registration
+                                    Open</span>
+                                <span
+                                    class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Badminton</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Sports Club Open Smash</h3>
+                            <p class="text-gray-600 text-sm mb-6">Singles and doubles badminton tournament held at the
+                                indoor university gymnasium.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center text-gray-500 text-xs mb-4">
+                                <i class="fa-regular fa-calendar-days mr-2 text-emerald-600"></i> Nov 02, 2026
+                            </div>
+                            <div class="border-t border-gray-100 pt-4 flex justify-between items-center">
+                                <span
+                                    class="text-xs font-medium text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100">Join
+                                    Event</span>
+                                <!-- Admin Action Buttons (View, Edit, Delete) -->
+                                <div class="flex items-center gap-1">
+                                    <button onclick="viewTournament('Sports Club Open Smash')"
+                                        class="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition"
+                                        title="View">
+                                        <i class="fa-solid fa-eye text-sm"></i>
+                                    </button>
+                                    <button onclick="editTournament('Sports Club Open Smash')"
+                                        class="p-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition"
+                                        title="Edit">
+                                        <i class="fa-solid fa-pen-to-square text-sm"></i>
+                                    </button>
+                                    <button onclick="deleteTournament(this)"
+                                        class="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition"
+                                        title="Delete">
+                                        <i class="fa-solid fa-trash text-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="dashboard.js"></script>
