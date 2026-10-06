@@ -162,7 +162,6 @@ closeBtn.addEventListener('click', () => {
     modal.hide();
 });
 const addTournamentForm = document.querySelector('#addTournamentForm');
-const saveBtn = document.querySelector('#saveBtn');
 addTournamentForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
