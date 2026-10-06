@@ -245,6 +245,9 @@
                 <header class="top-header d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
                     <div>
                         <h3 class="fw-bold mb-0 text-dark">Tournaments Management</h3>
+                        <p class="text-muted small mt-1 mb-0">Manage all 24 active and upcoming university tournaments
+                            efficiently from one place.</p>
+
                     </div>
                     <div class="d-flex align-items-center gap-3">
                         <div class="input-group search-pill bg-white shadow-sm border px-3 py-1 rounded-pill"
@@ -255,11 +258,10 @@
                                 placeholder="Search tournaments...">
                         </div>
                         <!-- Add Tournament Button Trigger Modal -->
-                        <button
+                        <button id="addTournamentBtn"
                             class="btn btn-success rounded-pill px-4 py-2 fw-semibold text-white shadow-sm d-inline-flex align-items-center justify-content-center text-nowrap"
-                            data-bs-toggle="modal" data-bs-target="#addTournamentModal"
                             style="background-color: #198754; border-color: #198754; font-size: 15px;">
-                            <i class="fa-solid fa-plus me-2"></i> Add Tournament
+                     <i class="fa-solid fa-plus me-2"></i> Add Tournament
                         </button>
                     </div>
                 </header>
@@ -304,8 +306,8 @@
                                     <td class="fw-bold text-dark">KU Champions League</td>
                                     <td><span class="badge bg-light text-dark border">Football</span></td>
                                     <td class="text-muted small">Oct 25, 2026</td>
-                                    <td><span
-                                            class="badge bg-primary bg-opacity-10 text-primary px-2 py-1">Upcoming</span>
+                                    <td><span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1"
+                                            style="color: #03321c !important; background-color: #ddf3e9 !important;">Upcoming</span>
                                     </td>
                                     <td class="text-end">
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
@@ -326,10 +328,12 @@
                                     <td class="fw-bold text-dark">Sports Club Open Smash</td>
                                     <td><span class="badge bg-light text-dark border">Badminton</span></td>
                                     <td class="text-muted small">Nov 02, 2026</td>
-                                    <td><span class="badge bg-warning bg-opacity-10 text-warning px-2 py-1">Registration
+                                    <td><span class="badge bg-warning bg-opacity-10
+                                         text-warning px-2 py-1" style="color: #03321c !important;
+                                          background-color: #ddf3e9!important;">Registration
                                             Open</span></td>
                                     <td class="text-end">
-                                     <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
                                             style="color: #03321c !important;" title="View"><i
                                                 class="fa-solid fa-eye"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
@@ -347,8 +351,9 @@
                                     <td class="fw-bold text-dark">Inter-Faculty Basketball Championship</td>
                                     <td><span class="badge bg-light text-dark border">Basketball</span></td>
                                     <td class="text-muted small">Nov 12, 2026</td>
-                                    <td><span
-                                            class="badge bg-primary bg-opacity-10 text-primary px-2 py-1">Upcoming</span>
+                                    <td><span class="badge bg-primary bg-opacity-10 
+                                            text-primary px-2 py-1" style="color: #03321c !important;
+                          background-color: #ddf3e9!important;">Upcoming</span>
                                     </td>
                                     <td class="text-end">
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
@@ -369,11 +374,12 @@
                                     <td class="fw-bold text-dark">KU Annual Athletics Meet</td>
                                     <td><span class="badge bg-light text-dark border">Athletics</span></td>
                                     <td class="text-muted small">Dec 01, 2026</td>
-                                    <td><span
-                                            class="badge bg-secondary bg-opacity-10 text-secondary px-2 py-1">Planning</span>
+                                    <td><span class="badge bg-secondary bg-opacity-10 text-secondary
+                     px-2 py-1" style="color: #03321c !important; 
+                      background-color: #ddf3e9!important;">Planning</span>
                                     </td>
                                     <td class="text-end">
-                                       <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
+                                        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
                                             style="color: #03321c !important;" title="View"><i
                                                 class="fa-solid fa-eye"></i></button>
                                         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
@@ -434,7 +440,7 @@
                                 </div>
                                 <div class="text-end mt-4">
                                     <button type="button" class="btn btn-light rounded-pill px-4 me-2"
-                                        data-bs-dismiss="modal">Cancel</button>
+                                        id="cancelBtn">Cancel</button>
                                     <button type="submit"
                                         class="btn btn-success rounded-pill px-4 text-white fw-semibold"
                                         style="background-color: #198754; border-color: #198754;">Save

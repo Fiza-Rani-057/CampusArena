@@ -142,3 +142,17 @@ const tourneyMiniOpts = {
         });
     }
 });
+
+// Add tournament modal 
+
+ const addTournament = document.querySelector('#addTournamentModal');
+ const addTournamentbtn = document.querySelector('addTournamentBtn');
+
+ addTournamentbtn.addEventListener('click' , ()=>{
+    addTournament.classList.add('active');
+ });
+
+ const cancelBtn = document.querySelector('#cancelBtn');
+ cancelBtn.addEventListener('click', ()=>{
+    addTournament.classList.remove('active');
+ });
