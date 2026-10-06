@@ -264,3 +264,94 @@ body.dark-mode .login-icon-box {
     background-color: rgba(2, 51, 36, 0.3) !important; /* Updated from rgba(16, 185, 129, 0.15) */
     color: #f8fafc !important;
 }
+/* ================= DARK MODE - TOURNAMENT TABLE ================= */
+
+body.dark-mode #tournaments .value-card {
+    background-color: #161c29 !important;
+}
+
+body.dark-mode #tournaments table {
+    color: #e5e7eb !important;
+}
+
+body.dark-mode #tournaments thead th {
+    color: #9ca3af !important;
+    background-color: #161c29 !important;
+    border-color: #374151 !important;
+}
+
+body.dark-mode #tournaments tbody td {
+    color: #e5e7eb !important;
+    background-color: #161c29 !important;
+    border-color: #374151 !important;
+}
+
+/* Tournament names */
+body.dark-mode #tournaments .text-dark {
+    color: #f1f5f9 !important;
+}
+
+/* Date */
+body.dark-mode #tournaments .text-muted {
+    color: #9ca3af !important;
+}
+
+/* Sport badge */
+body.dark-mode #tournaments .bg-light {
+    background-color: #273244 !important;
+    color: #e5e7eb !important;
+    border-color: #374151 !important;
+}
+
+/* Search box */
+body.dark-mode #tournaments .search-pill {
+    background-color: #161c29 !important;
+    border-color: #374151 !important;
+}
+
+body.dark-mode #tournaments .search-pill input {
+    color: #e5e7eb !important;
+}
+
+body.dark-mode #tournaments .search-pill input::placeholder {
+    color: #9ca3af !important;
+}
+
+/* Table row hover */
+body.dark-mode #tournaments tbody tr:hover td {
+    background-color: #1e293b !important;
+}
+/* ================= DARK MODE ACTION BUTTONS ================= */
+
+body.dark-mode #tournaments .view-btn,
+body.dark-mode #tournaments .edit-btn,
+body.dark-mode #tournaments .custom-delete-btn {
+    color: #ebf0ee !important;
+}
+
+/* Hover */
+body.dark-mode #tournaments .view-btn:hover,
+body.dark-mode #tournaments .edit-btn:hover,
+body.dark-mode #tournaments .custom-delete-btn:hover {
+    color: #03321c !important;
+    background-color: #b7f7d4 !important;
+}
+
+/* Delete button */
+body.dark-mode #tournaments .custom-delete-btn {
+    border: none !important;
+}
+body.dark-mode #tournaments .view-btn,
+body.dark-mode #tournaments .edit-btn,
+body.dark-mode #tournaments .custom-delete-btn {
+    background-color: #b7f7d4 !important;
+    color: #03321c !important;
+    border-color: #b7f7d4 !important;
+}
+
+/* Icons */
+body.dark-mode #tournaments .view-btn i,
+body.dark-mode #tournaments .edit-btn i,
+body.dark-mode #tournaments .custom-delete-btn i {
+    color: #03321c !important;
+}
