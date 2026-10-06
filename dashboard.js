@@ -157,3 +157,7 @@ const cancelBtn = document.querySelector('#cancelBtn');
 cancelBtn.addEventListener('click', () => {
     modal.hide();
 });
+const closeBtn = document.querySelector('.btn-close');
+closeBtn.addEventListener('click', () => {
+    modal.hide();
+});

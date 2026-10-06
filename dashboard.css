@@ -264,11 +264,3 @@ body.dark-mode .login-icon-box {
     background-color: rgba(2, 51, 36, 0.3) !important; /* Updated from rgba(16, 185, 129, 0.15) */
     color: #f8fafc !important;
 }
-
-#addTournamentModal {
-    display: none;
-}
-
-#addTournamentModal.active {
-    display: block;
-}
