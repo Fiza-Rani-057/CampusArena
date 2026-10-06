@@ -193,12 +193,12 @@ addTournamentForm.addEventListener('submit', (e) => {
             <i class="fa-solid fa-eye"></i>
         </button>
         <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white edit-btn"
-            style="color: #03321c !important;"
+             id = "updateTournamentBtn"  style="color: #03321c !important;"
             title="Edit">
             <i class="fa-solid fa-pen"></i>
         </button>
         <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
-            style="color: #03321c !important; border: none !important; background: transparent !important;"
+         style="color: #03321c !important; border: none !important; background: transparent !important;"
             title="Delete">
             <i class="fa-solid fa-trash"></i>
         </button>
@@ -232,6 +232,26 @@ newDeleteBtn.addEventListener('click', () => {
 
     addTournamentForm.reset();
     modal.hide();
+});
+
+//  New edit btn 
+const newEditBtn = newRow.querySelector('.edit-btn');
+
+newEditBtn.addEventListener('click', () => {
+
+    editRow = newRow;
+
+    const name = newRow.children[0].textContent.trim();
+    const sport = newRow.children[1].textContent.trim();
+    const date = newRow.children[2].textContent.trim();
+    const status = newRow.children[3].textContent.trim();
+
+    document.querySelector('#editTournamentName').value = name;
+    document.querySelector('#editTournamentSport').value = sport;
+    document.querySelector('#editTournamentDate').value = date;
+    document.querySelector('#editTournamentStatus').value = status;
+
+    editModal.show();
 });
 
 //  ===================== Delete Button ====================
@@ -287,4 +307,29 @@ const viewModal = new bootstrap.Modal(viewModalElement);
     });
 });
 
+// ===================== Edit button ======================
+const updateTournamentBtn = document.querySelector('#updateTournamentBtn');
+const editModalElement = document.querySelector('#editTournamentModal');
+const editModal = new bootstrap.Modal(editModalElement);
 
+let editRow;
+updateTournamentBtn.addEventListener('click', () => {
+
+    const name = document.querySelector('#editTournamentName').value;
+    const sport = document.querySelector('#editTournamentSport').value;
+    const date = document.querySelector('#editTournamentDate').value;
+    const status = document.querySelector('#editTournamentStatus').value;
+
+    editRow.children[0].textContent = name;
+    editRow.children[1].innerHTML =
+        `<span class="badge bg-light text-dark border">${sport}</span>`;
+
+    editRow.children[2].textContent = date;
+
+    editRow.children[3].innerHTML =
+        `<span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1">
+            ${status}
+        </span>`;
+
+    editModal.hide();
+});
