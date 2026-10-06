@@ -161,3 +161,8 @@ const closeBtn = document.querySelector('.btn-close');
 closeBtn.addEventListener('click', () => {
     modal.hide();
 });
+
+ const saveBtn = document.querySelector('.saveBtn');
+ saveBtn.addEventListener('click', ()=>{
+    
+ })
