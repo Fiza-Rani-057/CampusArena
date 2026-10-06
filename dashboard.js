@@ -199,16 +199,21 @@ addTournamentForm.addEventListener('submit', (e) => {
     modal.hide();
 });
 
-const deleteBtn = document.querySelector('#delete-btn');
+
+const deleteBtns = document.querySelectorAll('#delete-btn');
 const delModal = document.querySelector('#deleteConfirmModal');
 const deleteModal = new bootstrap.Modal(delModal);
+let selectedRow;
 
-deleteBtn.addEventListener('click', () => {
-    deleteModal.show();
+deleteBtns.forEach((deleteBtn) => {
+    deleteBtn.addEventListener('click', () => {
+        selectedRow = deleteBtn.closest('tr');
+        deleteModal.show();
+    });
 });
 
 const confirmAction = document.querySelector('#confirmDeleteBtn');
 confirmAction.addEventListener('click', () => {
-
+    selectedRow.remove();
     deleteModal.hide();
 });
