@@ -122,10 +122,10 @@ const tourneyMiniOpts = {
 
 ['tourneyMini1', 'tourneyMini2', 'tourneyMini3', 'tourneyMini4'].forEach((id, idx) => {
     const el = document.getElementById(id);
-    if(el) {
+    if (el) {
         new Chart(el, {
             type: 'line',
-            data: { labels: ['1','2','3','4','5','6'], datasets: [{ data: [12, 18, 15, 25, 20, 30], borderColor: '#198754', backgroundColor: 'rgba(25, 135, 84, 0.1)', fill: true }] },
+            data: { labels: ['1', '2', '3', '4', '5', '6'], datasets: [{ data: [12, 18, 15, 25, 20, 30], borderColor: '#198754', backgroundColor: 'rgba(25, 135, 84, 0.1)', fill: true }] },
             options: tourneyMiniOpts
         });
     }
@@ -134,10 +134,10 @@ const tourneyMiniOpts = {
 // Bottom small cards charts
 ['footMiniChart', 'badmintonMiniChart'].forEach(id => {
     const el = document.getElementById(id);
-    if(el) {
+    if (el) {
         new Chart(el, {
             type: 'line',
-            data: { labels: ['1','2','3','4','5','6'], datasets: [{ data: [10, 22, 14, 28, 24, 35], borderColor: '#198754', backgroundColor: 'rgba(25, 135, 84, 0.08)', fill: true }] },
+            data: { labels: ['1', '2', '3', '4', '5', '6'], datasets: [{ data: [10, 22, 14, 28, 24, 35], borderColor: '#198754', backgroundColor: 'rgba(25, 135, 84, 0.08)', fill: true }] },
             options: tourneyMiniOpts
         });
     }
@@ -145,14 +145,15 @@ const tourneyMiniOpts = {
 
 // Add tournament modal 
 
- const addTournament = document.querySelector('#addTournamentModal');
- const addTournamentbtn = document.querySelector('addTournamentBtn');
+const addTournament = document.querySelector('#addTournamentModal');
+const addTournamentbtn = document.querySelector('#addTournamentBtn');
+const modal = new bootstrap.Modal(addTournament);
 
- addTournamentbtn.addEventListener('click' , ()=>{
-    addTournament.classList.add('active');
- });
+addTournamentbtn.addEventListener('click', () => {
+    modal.show();
+});
 
- const cancelBtn = document.querySelector('#cancelBtn');
- cancelBtn.addEventListener('click', ()=>{
-    addTournament.classList.remove('active');
- });
+const cancelBtn = document.querySelector('#cancelBtn');
+cancelBtn.addEventListener('click', () => {
+    modal.hide();
+});
