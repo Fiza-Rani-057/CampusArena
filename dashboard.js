@@ -219,6 +219,22 @@ newViewBtn.addEventListener('click', () => {
     document.querySelector('#viewTournamentDate').textContent = date;
     document.querySelector('#viewTournamentStatus').textContent = status;
 
+    // New edit btn 
+    const newEditBtn = newRow.querySelector('.edit-btn');
+newEditBtn.addEventListener('click', () => {
+    editRow = newRow;
+    document.querySelector('#editTournamentName').value =
+        newRow.children[0].textContent.trim();
+    document.querySelector('#editSportCategory').value =
+        newRow.children[1].textContent.trim();
+    document.querySelector('#editTournamentDate').value =
+        newRow.children[2].textContent.trim();
+    document.querySelector('#editTournamentStatus').value =
+        newRow.children[3].textContent.trim();
+    editModal.show();
+
+});
+
     viewModal.show();
 });
 //   New Row delete btn 
@@ -234,43 +250,22 @@ newDeleteBtn.addEventListener('click', () => {
     modal.hide();
 });
 
-//  New edit btn 
-const newEditBtn = newRow.querySelector('.edit-btn');
 
-newEditBtn.addEventListener('click', () => {
-
-    editRow = newRow;
-
-    const name = newRow.children[0].textContent.trim();
-    const sport = newRow.children[1].textContent.trim();
-    const date = newRow.children[2].textContent.trim();
-    const status = newRow.children[3].textContent.trim();
-
-    document.querySelector('#editTournamentName').value = name;
-    document.querySelector('#editTournamentSport').value = sport;
-    document.querySelector('#editTournamentDate').value = date;
-    document.querySelector('#editTournamentStatus').value = status;
-
-    editModal.show();
-});
 
 //  ===================== Delete Button ====================
 const deleteBtns = document.querySelectorAll('#delete-btn');
 const delModal = document.querySelector('#deleteConfirmModal');
 const deleteModal = new bootstrap.Modal(delModal);
 let selectedRow;
-
 deleteBtns.forEach((deleteBtn) => {
     deleteBtn.addEventListener('click', () => {
         selectedRow = deleteBtn.closest('tr');
         deleteModal.show();
     });
 });
-
 const confirmAction = document.querySelector('#confirmDeleteBtn');
 confirmAction.addEventListener('click', () => {
     selectedRow.remove();
-
     totaltournaments--;
 totalTournaments.textContent = totaltournaments;
 
@@ -313,23 +308,60 @@ const editModalElement = document.querySelector('#editTournamentModal');
 const editModal = new bootstrap.Modal(editModalElement);
 
 let editRow;
-updateTournamentBtn.addEventListener('click', () => {
+
+const editBtns = document.querySelectorAll('.edit-btn');
+editBtns.forEach((editBtn) => {
+
+    editBtn.addEventListener('click', () => {
+
+        editRow = editBtn.closest('tr');
+        const name = editRow.children[0].textContent.trim();
+        const sport = editRow.children[1].textContent.trim();
+        const date = editRow.children[2].textContent.trim();
+        const status = editRow.children[3].textContent.trim();
+
+        document.querySelector('#editTournamentName').value = name;
+        document.querySelector('#editSportCategory').value = sport;
+        document.querySelector('#editTournamentDate').value = date;
+        document.querySelector('#editTournamentStatus').value = status;
+
+        editModal.show();
+
+    });
+
+});
+
+
+// ===================== Update Tournament ====================
+
+const editForm = document.querySelector('#editTournamentForm');
+
+editForm.addEventListener('submit', (e) => {
+
+    e.preventDefault();
 
     const name = document.querySelector('#editTournamentName').value;
-    const sport = document.querySelector('#editTournamentSport').value;
+    const sport = document.querySelector('#editSportCategory').value;
     const date = document.querySelector('#editTournamentDate').value;
     const status = document.querySelector('#editTournamentStatus').value;
 
     editRow.children[0].textContent = name;
-    editRow.children[1].innerHTML =
-        `<span class="badge bg-light text-dark border">${sport}</span>`;
+
+    editRow.children[1].innerHTML = `
+        <span class="badge bg-light text-dark border">
+            ${sport}
+        </span>
+    `;
 
     editRow.children[2].textContent = date;
 
-    editRow.children[3].innerHTML =
-        `<span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1">
+    editRow.children[3].innerHTML = `
+        <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1"
+            style="color: #03321c !important; background-color: #ddf3e9!important;">
             ${status}
-        </span>`;
+        </span>
+    `;
 
     editModal.hide();
+
 });
