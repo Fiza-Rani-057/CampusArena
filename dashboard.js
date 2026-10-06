@@ -178,27 +178,32 @@ addTournamentForm.addEventListener('submit', (e) => {
     const tablebody = document.querySelector('tbody');
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
-<td class="fw-bold text-dark">${tournamentName}</td>
- <td><span class="badge bg-light text-dark border">${sport}</span></td>
-   <td class="text-muted small">${date}</td>
- <td><span class="badge bg-primary bg-opacity-10 
-  text-primary px-2 py-1" style="color: #03321c !important;
-  background-color: #ddf3e9!important;">${status}</span>
+    <td class="fw-bold text-dark">${tournamentName}</td>
+    <td> <span class="badge bg-light text-dark border"> ${sport}</span>
     </td>
-   <td class="text-end">
-   <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-       id = "veiw-btn" style="color: #03321c !important;" title="View"><i
-     class="fa-solid fa-eye"></i></button>
-        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white"
-         id = "edit-btn"  style="color: #03321c !important;" title="Edit"><i
-          class="fa-solid fa-pen"></i></button>
-         <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
-          id = "delete-btn" style="color: #03321c !important; border: none !important; background: transparent !important;"
-      title="Delete">
-       <i class="fa-solid fa-trash"></i>
-           </button>
-        </td>
-    `
+ <td class="text-muted small">${date}</td><td>
+<span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1"
+  style="color: #03321c !important; background-color: #ddf3e9!important;">
+  ${status}</span></td>
+
+    <td class="text-end">
+        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white view-btn"
+            style="color: #03321c !important;"
+            title="View">
+            <i class="fa-solid fa-eye"></i>
+        </button>
+        <button class="btn btn-sm rounded-pill px-2 py-1 me-1 text-white edit-btn"
+            style="color: #03321c !important;"
+            title="Edit">
+            <i class="fa-solid fa-pen"></i>
+        </button>
+        <button class="btn btn-sm rounded-pill px-2 py-1 custom-delete-btn"
+            style="color: #03321c !important; border: none !important; background: transparent !important;"
+            title="Delete">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+    </td>
+`;
     tablebody.appendChild(newRow);
     totaltournaments++;
   totalTournaments.textContent = totaltournaments;
