@@ -205,6 +205,28 @@ addTournamentForm.addEventListener('submit', (e) => {
     </td>
 `;
     tablebody.appendChild(newRow);
+
+    // New row veiw btn 
+    const newViewBtn = newRow.querySelector('.view-btn');
+newViewBtn.addEventListener('click', () => {
+    const name = newRow.children[0].textContent;
+    const sport = newRow.children[1].textContent;
+    const date = newRow.children[2].textContent;
+    const status = newRow.children[3].textContent;
+
+    document.querySelector('#viewTournamentName').textContent = name;
+    document.querySelector('#viewTournamentSport').textContent = sport;
+    document.querySelector('#viewTournamentDate').textContent = date;
+    document.querySelector('#viewTournamentStatus').textContent = status;
+
+    viewModal.show();
+});
+//   New Row delete btn 
+const newDeleteBtn = newRow.querySelector('.custom-delete-btn');
+newDeleteBtn.addEventListener('click', () => {
+    selectedRow = newRow;
+    deleteModal.show();
+});
     totaltournaments++;
   totalTournaments.textContent = totaltournaments;
 
