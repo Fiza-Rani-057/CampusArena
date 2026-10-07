@@ -128,6 +128,33 @@ body.dark-mode .border-top {
 .main-viewport:has(#tournaments:target) #dashboard {
     display: none;
 }
+/* Hide all sections by default */
+.admin-section {
+    display: none;
+}
+
+/* Dashboard is visible by default */
+#dashboard {
+    display: block;
+}
+
+/* Show selected section */
+#tournaments:target,
+#players:target,
+#matches:target,
+#messages:target,
+#profile:target {
+    display: block;
+}
+
+/* When another section is selected, hide dashboard */
+body:has(#tournaments:target) #dashboard,
+body:has(#players:target) #dashboard,
+body:has(#matches:target) #dashboard,
+body:has(#messages:target) #dashboard,
+body:has(#profile:target) #dashboard {
+    display: none;
+}
 /* Tournaments active */
 body:has(#tournaments:target) .sidebar-container a[href="#tournaments"] {
     background: #013e22 !important;
