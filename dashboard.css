@@ -165,7 +165,7 @@ body {
 }
 
 .custom-auth-tabs .nav-link.active {
-    background-color: #023324 !important; /* Updated from #022d20 */
+    background-color: #023324 !important; 
     color: #ffffff !important;
 }
 
@@ -182,13 +182,13 @@ body {
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active {
-    background-color: #011e15 !important; /* Thoda darker shade for hover effect */
+    background-color: #011e15 !important; 
     border-color: #011e15 !important;
 }
 
 /* Icon Box Custom Base Styling */
 .login-icon-box {
-    background-color: rgba(2, 51, 36, 0.1) !important; /* Semi-transparent #023324 */
+    background-color: rgba(2, 51, 36, 0.1) !important; 
     color: #023324 !important;
 }
 
@@ -201,8 +201,8 @@ body {
 }
 
 .form-control:focus {
-    border-color: #023324 !important; /* Updated from #023021 */
-    box-shadow: 0 0 0 0.25rem rgba(2, 51, 36, 0.15) !important; /* Updated green glow */
+    border-color: #023324 !important; 
+    box-shadow: 0 0 0 0.25rem rgba(2, 51, 36, 0.15) !important; 
 }
 
 /* ==================== DARK MODE SUPPORT ==================== */
@@ -365,4 +365,11 @@ body.dark-mode #tournaments button.view-btn {
 
 body.dark-mode #tournaments button.view-btn i {
     color: #03321c !important;
+}
+.admin-section {
+    display: none;
+}
+
+.admin-section.active {
+    display: block;
 }
