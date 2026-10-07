@@ -133,10 +133,47 @@ body:has(#tournaments:target) .sidebar-container a[href="#tournaments"] {
     background: #013e22 !important;
     color: #fff !important;
 }
+
+/* Profile active */
+body:has(#profile:target) .sidebar-container a[href="#profile"] {
+    background: #013e22 !important;
+    color: #fff !important;
+}
+
 /* Dashboard active */
-body:not(:has(#tournaments:target)) .sidebar-container a[href="#dashboard"] {
+body:not(:has(#tournaments:target)):not(:has(#profile:target))
+.sidebar-container a[href="#dashboard"] {
     background: #01301a !important;
     color: #fff !important;
+}
+/* Default */
+#dashboard {
+    display: block;
+}
+
+#tournaments,
+#profile {
+    display: none;
+}
+
+/* Tournaments open */
+body:has(#tournaments:target) #dashboard,
+body:has(#tournaments:target) #profile {
+    display: none;
+}
+
+body:has(#tournaments:target) #tournaments {
+    display: block;
+}
+
+/* Profile open */
+body:has(#profile:target) #dashboard,
+body:has(#profile:target) #tournaments {
+    display: none;
+}
+
+body:has(#profile:target) #profile {
+    display: block;
 }
 body {
     background-color: #f8fafc;

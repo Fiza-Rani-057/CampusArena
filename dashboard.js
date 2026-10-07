@@ -331,13 +331,9 @@ editBtns.forEach((editBtn) => {
 
 });
 
-
 // ===================== Update Tournament ====================
-
 const editForm = document.querySelector('#editTournamentForm');
-
 editForm.addEventListener('submit', (e) => {
-
     e.preventDefault();
 
     const name = document.querySelector('#editTournamentName').value;
@@ -346,22 +342,18 @@ editForm.addEventListener('submit', (e) => {
     const status = document.querySelector('#editTournamentStatus').value;
 
     editRow.children[0].textContent = name;
-
     editRow.children[1].innerHTML = `
         <span class="badge bg-light text-dark border">
             ${sport}
         </span>
     `;
-
     editRow.children[2].textContent = date;
-
     editRow.children[3].innerHTML = `
         <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1"
             style="color: #03321c !important; background-color: #ddf3e9!important;">
             ${status}
         </span>
     `;
-
     editModal.hide();
 
 });
