@@ -115,77 +115,26 @@ body.dark-mode .active-tab {
 body.dark-mode .border-top {
     border-color: #1e293b !important;
 }
-/* Page Sections */
+/* =========================
+   PAGE SECTIONS
+========================= */
 
-#tournaments {
-    display: none;
-}
-
-#tournaments:target {
-    display: block;
-}
-
-.main-viewport:has(#tournaments:target) #dashboard {
-    display: none;
-}
-/* Hide all sections by default */
-.admin-section {
-    display: none;
-}
-
-/* Dashboard is visible by default */
+/* Dashboard default */
 #dashboard {
     display: block;
 }
 
-/* Show selected section */
-#tournaments:target,
-#players:target,
-#matches:target,
-#messages:target,
-#profile:target {
-    display: block;
-}
-
-/* When another section is selected, hide dashboard */
-body:has(#tournaments:target) #dashboard,
-body:has(#players:target) #dashboard,
-body:has(#matches:target) #dashboard,
-body:has(#messages:target) #dashboard,
-body:has(#profile:target) #dashboard {
-    display: none;
-}
-/* Tournaments active */
-body:has(#tournaments:target) .sidebar-container a[href="#tournaments"] {
-    background: #013e22 !important;
-    color: #fff !important;
-}
-
-/* Profile active */
-body:has(#profile:target) .sidebar-container a[href="#profile"] {
-    background: #013e22 !important;
-    color: #fff !important;
-}
-
-/* Dashboard active */
-body:not(:has(#tournaments:target)):not(:has(#profile:target))
-.sidebar-container a[href="#dashboard"] {
-    background: #01301a !important;
-    color: #fff !important;
-}
-/* Default */
-#dashboard {
-    display: block;
-}
-
+/* Other sections hidden */
 #tournaments,
+#players,
+#matches,
+#messages,
 #profile {
     display: none;
 }
 
-/* Tournaments open */
-body:has(#tournaments:target) #dashboard,
-body:has(#tournaments:target) #profile {
+/* Tournaments */
+body:has(#tournaments:target) #dashboard {
     display: none;
 }
 
@@ -193,19 +142,83 @@ body:has(#tournaments:target) #tournaments {
     display: block;
 }
 
-/* Profile open */
-body:has(#profile:target) #dashboard,
-body:has(#profile:target) #tournaments {
+/* Players */
+body:has(#players:target) #dashboard {
+    display: none;
+}
+
+body:has(#players:target) #players {
+    display: block;
+}
+
+/* Matches */
+body:has(#matches:target) #dashboard {
+    display: none;
+}
+
+body:has(#matches:target) #matches {
+    display: block;
+}
+
+/* Messages */
+body:has(#messages:target) #dashboard {
+    display: none;
+}
+
+body:has(#messages:target) #messages {
+    display: block;
+}
+
+/* Profile */
+body:has(#profile:target) #dashboard {
     display: none;
 }
 
 body:has(#profile:target) #profile {
     display: block;
 }
-body {
-    background-color: #f8fafc;
-    transition: background-color 0.3s ease;
+
+
+/* =========================
+   SIDEBAR ACTIVE COLOR
+========================= */
+
+/* Dashboard */
+body:not(:has(#tournaments:target)):not(:has(#players:target)):not(:has(#matches:target)):not(:has(#messages:target)):not(:has(#profile:target))
+.sidebar-container a[href="#dashboard"] {
+    background: #01301a !important;
+    color: #fff !important;
 }
+
+/* Tournaments */
+body:has(#tournaments:target)
+.sidebar-container a[href="#tournaments"] {
+    background: #013e22 !important;
+    color: #fff !important;
+}
+
+/* Players */
+body:has(#players:target)
+.sidebar-container a[href="#players"] {
+    background: #013e22 !important;
+    color: #fff !important;
+}
+
+/* Matches */
+body:has(#matches:target)
+.sidebar-container a[href="#matches"] {
+    background: #013e22 !important;
+    color: #fff !important;
+}
+g
+
+/* Profile */
+body:has(#profile:target)
+.sidebar-container a[href="#profile"] {
+    background: #013e22 !important;
+    color: #fff !important;
+}
+ 
 
 .login-card {
     background-color: #ffffff;
@@ -436,4 +449,15 @@ body.dark-mode #tournaments button.view-btn i {
 
 .admin-section.active {
     display: block;
+}
+/* Dark Mode Table Actions & Light Green Highlights */
+body.dark-mode .table td, 
+body.dark-mode .table th {
+    color: #e2e8f0 !important;
+    border-color: rgba(25, 135, 84, 0.2) !important;
+}
+
+body.dark-mode .custom-delete-btn:hover {
+    background-color: rgba(25, 135, 84, 0.25) !important;
+    color: #20c997 !important;
 }
