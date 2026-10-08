@@ -210,7 +210,7 @@ body:has(#matches:target)
     background: #013e22 !important;
     color: #fff !important;
 }
-g
+
 
 /* Profile */
 body:has(#profile:target)
