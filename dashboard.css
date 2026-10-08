@@ -461,3 +461,175 @@ body.dark-mode .custom-delete-btn:hover {
     background-color: rgba(25, 135, 84, 0.25) !important;
     color: #20c997 !important;
 }
+/* =========================
+   PLAYERS + MATCHES DARK MODE
+========================= */
+
+body.dark-mode #players .card,
+body.dark-mode #matches .card,
+body.dark-mode #profile .card {
+    background-color: #111c38 !important;
+    color: #f1f5f9 !important;
+}
+
+
+/* Players & Matches table */
+body.dark-mode #players .table,
+body.dark-mode #matches .table {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode #players thead th,
+body.dark-mode #matches thead th {
+    background-color: #111c38 !important;
+    color: #94a3b8 !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode #players tbody td,
+body.dark-mode #matches tbody td {
+    background-color: #111c38 !important;
+    color: #e2e8f0 !important;
+    border-color: #334155 !important;
+}
+
+
+/* Text */
+body.dark-mode #players .text-dark,
+body.dark-mode #matches .text-dark,
+body.dark-mode #profile .text-dark {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode #players .text-muted,
+body.dark-mode #matches .text-muted,
+body.dark-mode #profile .text-muted {
+    color: #94a3b8 !important;
+}
+
+
+/* White backgrounds */
+body.dark-mode #players .bg-white,
+body.dark-mode #matches .bg-white,
+body.dark-mode #profile .bg-white {
+    background-color: #111c38 !important;
+}
+
+
+/* Light backgrounds */
+body.dark-mode #players .bg-light,
+body.dark-mode #matches .bg-light,
+body.dark-mode #profile .bg-light {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+
+/* Search boxes */
+body.dark-mode #players .search-pill,
+body.dark-mode #matches .search-pill {
+    background-color: #111c38 !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode #players .form-control,
+body.dark-mode #matches .form-control,
+body.dark-mode #profile .form-control {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode #players .form-control::placeholder,
+body.dark-mode #matches .form-control::placeholder,
+body.dark-mode #profile .form-control::placeholder {
+    color: #64748b !important;
+}
+
+
+/* Badges */
+body.dark-mode #players .badge.bg-light,
+body.dark-mode #matches .badge.bg-light {
+    background-color: #273244 !important;
+    color: #e2e8f0 !important;
+    border-color: #475569 !important;
+}
+
+
+/* Profile small cards */
+body.dark-mode #profile .bg-light {
+    background-color: #1e293b !important;
+}
+
+
+/* Profile heading */
+body.dark-mode #profile h3,
+body.dark-mode #profile h4,
+body.dark-mode #profile h5,
+body.dark-mode #profile h6 {
+    color: #f1f5f9 !important;
+}
+
+
+/* Profile border */
+body.dark-mode #profile .border-top {
+    border-color: #334155 !important;
+}
+
+
+/* Profile avatar border */
+body.dark-mode #profile img {
+    border-color: #334155 !important;
+}
+
+
+/* Modals */
+body.dark-mode .modal-content {
+    background-color: #111c38 !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .modal-content .text-dark {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .modal-content .bg-light {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .modal-content .form-control,
+body.dark-mode .modal-content .form-select {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .modal-content .form-control::placeholder {
+    color: #64748b !important;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    border-color: #334155 !important;
+}
+.player-action-btn {
+    color: #032510 !important;
+}
+
+/* Dark mode */
+body.dark-mode .player-action-btn {
+    background-color: #9bdec8 !important;
+    color: #032510 !important;
+    border-color: #1f6045 !important;
+}
+.match-action-btn {
+    color: #032113 !important;
+}
+
+/* Dark Mode */
+body.dark-mode .match-action-btn {
+    background-color: #c2f6e1 !important;
+    color: #033816 !important;
+    border-color: #1f6045 !important;
+}
